@@ -1,0 +1,5 @@
+.rspec
+/.bundle
+.DS_Store
+config/app_secret.yml
+config/database.yml
