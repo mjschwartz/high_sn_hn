@@ -33,3 +33,6 @@ task :tweet_items do
       end
     end
 end
+
+desc 'Run both the process and the tweet steps'
+task :cron => [:process_homepage, :tweet_items]
