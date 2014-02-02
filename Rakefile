@@ -16,7 +16,6 @@ end
 desc "Tweet out items"
 task :tweet_items do
   require "./app"
-  HighSnHn::Page.new.process
   point_thresh = 125
   sn_thresh = 2.0
   tweeted = 0
