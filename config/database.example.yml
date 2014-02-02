@@ -1,0 +1,27 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: high_sn_hn_development
+  pool: 5
+  username: root
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: high_sn_hn_test
+  pool: 5
+  username: root
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: high_sn_hn_production
+  pool: 5
+  username: foo
+  password: bar
+  socket: /var/run/mysqld/mysqld.sock

@@ -26,6 +26,10 @@ module HighSnHn
 
         add_index "snapshots", ["submission_id"], :name => "index_snapshots_on_hn_submission_id"
 
+        ActiveRecord::Base.connection.execute("SET collation_connection = 'utf8_general_ci';")
+        ActiveRecord::Base.connection.execute("ALTER DATABASE #{ActiveRecord::Base.connection_config[:database]} CHARACTER SET utf8 COLLATE utf8_general_ci;")
+        ActiveRecord::Base.connection.execute("ALTER TABLE submissions CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
+        ActiveRecord::Base.connection.execute("ALTER TABLE snapshots CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
         puts "done."
       end
     end

@@ -11,7 +11,7 @@ This is the basic source code for the bot that gathers the stories from HN, pers
 
 ### Configuration
 
-Define database information:
+Create your databases(es) and define database information:
 
     cp config/database.example.yml database.yml
 
