@@ -26,7 +26,7 @@ task :tweet_items do
       if (postable.score > point_thresh) && (postable.score / postable.comment_count.to_f > sn_thresh ) && tweeted < 2
         # don't tweet too many at once
         tweeted += 1
-        #HighSnHn::TweetSubmission.new(postable).post
+        HighSnHn::TweetSubmission.new(postable).post
         postable.tweeted = true
         postable.save
       end

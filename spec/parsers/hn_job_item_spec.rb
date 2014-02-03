@@ -23,7 +23,7 @@ describe HighSnHn::HnJobItem do
 
     describe "score" do
       it "should find a string with the number of points" do
-        expect(@item.score).to eq(nil)
+        expect(@item.score).to eq(0)
       end
     end
 
@@ -41,7 +41,7 @@ describe HighSnHn::HnJobItem do
 
     describe "comment_count" do
       it "should find a string with the HN id" do
-        expect(@item.comment_count).to eq(nil)
+        expect(@item.comment_count).to eq(0)
       end
     end
   end

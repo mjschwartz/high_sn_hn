@@ -21,7 +21,7 @@ module HighSnHn
     end
 
     def score
-      nil
+      0
     end
 
     def meta_links
@@ -37,7 +37,7 @@ module HighSnHn
     end
 
     def comment_count
-      nil
+      0
     end
 
   end
