@@ -31,7 +31,7 @@ module HighSnHn
       sleep(3)
 
       twitter_text = @submission.title + ": " + article_link + " ( " + comments_link + " )"
-      #@client.update(twitter_text)
+      @client.update(twitter_text)
 
       record_posting(article_link, comments_link)
       sleep(3)
