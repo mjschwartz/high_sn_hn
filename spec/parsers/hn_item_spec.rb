@@ -4,7 +4,7 @@ describe HighSnHn::HnItem do
 
   describe "for a typical link" do
     before(:each) do
-      @item = HighSnHn::Page.new.links.first
+      @item = HighSnHn::HnPage.new.links.first
     end
 
     describe "title" do
@@ -44,58 +44,45 @@ describe HighSnHn::HnItem do
     end
   end
 
-  describe "for an Ask HN story" do
-    it "should create a link to the comments section" do
-      @item = HighSnHn::Page.new.links[1]
-      expect(@item.link).to eq("https://news.ycombinator.com/item?id=7162197")
-    end
-  end
-
-  describe "for a story linking to https" do
-    it "should should properly form the link" do
-      @item = HighSnHn::Page.new.links[2]
-      expect(@item.link).to eq("https://www.baekdal.com/opinion/how-inapp-purchases-has-destroyed-the-industry/")
-    end
-  end
-
-  describe "for a YC job posting" do
+  describe "for an https link" do
     before(:each) do
-      @item = HighSnHn::Page.new.links[3]
+      @item = HighSnHn::HnPage.new.links[2]
     end
 
-    it "should should properly form the link" do
-      expect(@item.link).to eq("https://news.ycombinator.com/item?id=7169004")
-    end
     describe "title" do
       it "should return the page's title" do
-        expect(@item.title).to eq("Join Firebase as Production Engineer #2")
+        expect(@item.title).to eq("How in-app purchases have destroyed the game industry")
+      end
+    end
+
+    describe "link" do
+      it "should return the URL of the submission item" do
+        expect(@item.link).to eq("https://www.baekdal.com/opinion/how-inapp-purchases-has-destroyed-the-industry/")
       end
     end
 
     describe "score" do
       it "should find a string with the number of points" do
-        expect(@item.score).to eq(nil)
+        expect(@item.score).to eq("284")
       end
     end
 
     describe "hn_id" do
       it "should find a string with the HN id" do
-        expect(@item.hn_id).to eq("7169004")
+        expect(@item.hn_id).to eq("7161901")
       end
     end
 
     describe "user" do
       it "should find the submitting user's name" do
-        expect(@item.user).to eq(nil)
+        expect(@item.user).to eq("seivan")
       end
     end
 
     describe "comment_count" do
       it "should find a string with the HN id" do
-        expect(@item.comment_count).to eq(nil)
+        expect(@item.comment_count).to eq("251")
       end
     end
   end
-
-
 end

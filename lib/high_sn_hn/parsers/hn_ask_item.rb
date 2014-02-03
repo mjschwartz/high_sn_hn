@@ -1,6 +1,6 @@
 module HighSnHn
 
-  class HnItem
+  class HnAskItem
 
     def initialize(elements)
       @title_line = elements[:title_line]
@@ -12,7 +12,7 @@ module HighSnHn
     end
 
     def link
-      @title_line.xpath('a/@href').text
+      "https://news.ycombinator.com/#{@title_line.xpath('a/@href').text}"
     end
 
     def score

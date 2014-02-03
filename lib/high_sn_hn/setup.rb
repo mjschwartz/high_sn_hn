@@ -25,11 +25,23 @@ module HighSnHn
         end
 
         add_index "snapshots", ["submission_id"], :name => "index_snapshots_on_hn_submission_id"
+        
+        puts "Creating postings table..."
+        create_table "postings", :force => true do |t|
+          t.integer   "submission_id"
+          t.string    "shortened_url"
+          t.string    "shortened_comments_url"
+          t.datetime  "created_at"
+          t.datetime  "updated_at"
+        end
+
+        add_index "postings", ["submission_id"], :name => "index_postings_on_hn_submission_id"
 
         ActiveRecord::Base.connection.execute("SET collation_connection = 'utf8_general_ci';")
         ActiveRecord::Base.connection.execute("ALTER DATABASE #{ActiveRecord::Base.connection_config[:database]} CHARACTER SET utf8 COLLATE utf8_general_ci;")
         ActiveRecord::Base.connection.execute("ALTER TABLE submissions CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
         ActiveRecord::Base.connection.execute("ALTER TABLE snapshots CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
+        ActiveRecord::Base.connection.execute("ALTER TABLE postings CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
         puts "done."
       end
     end

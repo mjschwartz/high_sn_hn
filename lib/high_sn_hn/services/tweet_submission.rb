@@ -13,6 +13,14 @@ module HighSnHn
       end
     end
 
+    def record_posting(short_url, short_comments_url)
+      HighSnHn::Posting.create({
+        submission_id: @submission.id,
+        shortened_url: short_url,
+        shortened_comments_url: short_comments_url,
+      })
+    end
+
     def post
       #post it
       article_link = HighSnHn::GenerateShortlink.new(@submission.link).shorten
@@ -24,6 +32,8 @@ module HighSnHn
 
       twitter_text = @submission.title + ": " + article_link + " ( " + comments_link + " )"
       #@client.update(twitter_text)
+
+      record_posting(article_link, comments_link)
       sleep(3)
     end
 

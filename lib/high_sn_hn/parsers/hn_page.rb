@@ -1,6 +1,6 @@
 module HighSnHn
 
-  class Page
+  class HnPage
     attr_reader :doc
 
     def initialize
@@ -13,7 +13,7 @@ module HighSnHn
 
     def links
       @doc.css("td.subtext").collect do |l|
-        HighSnHn::HnItem.new({
+        HighSnHn::HnAbstractItem.new({
           title_line: l.parent.xpath("preceding-sibling::*[1]").css("td.title").last,
           meta_line: l
         })
