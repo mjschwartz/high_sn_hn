@@ -7,7 +7,7 @@ module HighSnHn
         create_table "submissions", :force => true do |t|
           t.integer   "hn_submission_id"
           t.string    "title"
-          t.string    "link"
+          t.string    "link", :limit => 1000
           t.string    "submitting_user"
           t.boolean   "tweeted"
           t.datetime  "created_at"
