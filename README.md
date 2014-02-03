@@ -35,4 +35,4 @@ The app looks for an evnironment variable called HIGHSNHN_ENV to pick a database
 
 ### Gathering data
 
-  rake cron
+    rake cron
