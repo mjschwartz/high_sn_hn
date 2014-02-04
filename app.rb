@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'yaml'
 require 'active_record'
 require 'mysql2'

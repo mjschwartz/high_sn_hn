@@ -1,3 +1,4 @@
+# encoding: UTF-8
 module HighSnHn
 
   class HnPage
@@ -8,7 +9,11 @@ module HighSnHn
     end
 
     def fetch_homepage
-      Nokogiri::HTML(open("https://news.ycombinator.com/"))
+      html = open("https://news.ycombinator.com/")
+      @doc = Nokogiri::HTML(html.read)
+      @doc.encoding = 'utf-8'
+
+      @doc
     end
 
     def links
@@ -24,7 +29,7 @@ module HighSnHn
       links.each do |link|
         if HighSnHn::Submission.where(hn_submission_id: link.hn_id).exists?
           sub = HighSnHn::Submission.where(hn_submission_id: link.hn_id).first
-        else 
+        else
           sub = HighSnHn::Submission.create({
             hn_submission_id: link.hn_id,
             title: link.title,

@@ -2,7 +2,8 @@ module HighSnHn
 
   class TweetSubmission
 
-    def initialize(submission)
+    def initialize(submission, skip_sleep=false)
+      @skip_sleep = skip_sleep || false # gross way to make specs less annoying
       @submission = submission
       api_info = HighSnHn::Keys.twitter
       @client = Twitter::REST::Client.new do |config|
@@ -21,22 +22,20 @@ module HighSnHn
       })
     end
 
+    # We sleep in between each API call - we aren't in a hurry since we do
+    # at most 2 per cron job, so just playing it safe.
     def post
-      #post it
       article_link = HighSnHn::GenerateShortlink.new(@submission.link).shorten
-      sleep(3)
-      
-      comments_url = "http://news.ycombinator.com/item?id=#{@submission.hn_submission_id}"
+      sleep(2) unless @skip_sleep
+
+      comments_url = "https://news.ycombinator.com/item?id=#{@submission.hn_submission_id}"
       comments_link = HighSnHn::GenerateShortlink.new(comments_url).shorten
-      sleep(3)
+      sleep(2) unless @skip_sleep
 
       twitter_text = @submission.title + ": " + article_link + " ( " + comments_link + " )"
       @client.update(twitter_text)
 
       record_posting(article_link, comments_link)
-      sleep(3)
     end
-
   end
-
 end

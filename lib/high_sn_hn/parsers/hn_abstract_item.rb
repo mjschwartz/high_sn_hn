@@ -9,22 +9,13 @@ module HighSnHn
 
       if elements[:meta_line].css('a').blank?
         # this is a YC Job posting
-        @page = HighSnHn::HnJobItem.new({
-          title_line: elements[:title_line],
-          meta_line: elements[:meta_line]
-        })
+        @page = HighSnHn::HnJobItem.new(elements)
       elsif link.text && !link.text.match(/^https?:/)
         # this is a Ask HN style self post
-        @page = HighSnHn::HnAskItem.new({
-          title_line: elements[:title_line],
-          meta_line: elements[:meta_line]
-        })
+        @page = HighSnHn::HnAskItem.new(elements)
       else
         # this is a normal posting to an external URL
-        @page = HighSnHn::HnItem.new({
-          title_line: elements[:title_line],
-          meta_line: elements[:meta_line]
-        })
+        @page = HighSnHn::HnItem.new(elements)
       end
     end
 

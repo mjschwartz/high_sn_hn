@@ -13,7 +13,7 @@ module HighSnHn
 
     def link
       link = @title_line.xpath('a/@href')
-      if link.text &&  link.text.match(/^https?:/)
+      if link.text && link.text.match(/^https?:/)
         link.text
       else
         "https://news.ycombinator.com/#{link.text}"
@@ -22,10 +22,6 @@ module HighSnHn
 
     def score
       0
-    end
-
-    def meta_links
-      @meta_line.css('a')
     end
 
     def hn_id
