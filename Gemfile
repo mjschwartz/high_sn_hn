@@ -1,5 +1,4 @@
-source 'https://rubygems.org' 
-ruby '2.0.0'
+source 'https://rubygems.org'
 
 gem 'nokogiri'
 gem 'activerecord', '~> 4.0.0'
