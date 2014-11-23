@@ -25,9 +25,10 @@ module HighSnHn
     private
 
     def spread_id_to_children
+      return unless self.id
       HighSnHn::Comment.where(parent: hn_id)
         .where(story_id: nil)
-        .update_all(story_id: id)
+        .each { |c| c.update_attribute(:story_id, self.id) }
     end
 
     def url_for(data)

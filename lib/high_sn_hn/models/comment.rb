@@ -3,8 +3,7 @@ module HighSnHn
   class Comment < ActiveRecord::Base
     belongs_to :story
 
-    after_save :fill_in_story
-    after_save :spread_story_to_children
+    after_save :get_or_share_story_id
 
     def update(data)
       update_attributes({
@@ -36,15 +35,24 @@ module HighSnHn
 
     private
 
-    def fill_in_story
-      return if story_id
+    def get_or_share_story_id
+      return unless self.id
+      if self.story_id
+        spread_story_to_children
+      elsif self.parent
+        find_story_from_parent
+      end
+    end
+
+    def find_story_from_parent
       id = parent_story_id
       update_attribute(:story_id, id) unless id.nil?
     end
 
     def spread_story_to_children
-      return unless story_id
-      HighSnHn::Comment.where(parent: hn_id).each { |c| c.update_attribute(:story_id, story_id) }
+      HighSnHn::Comment.where(story_id: nil)
+        .where(parent: self.hn_id)
+        .each { |c| c.update_attribute(:story_id, self.story_id) }
     end
 
   end
