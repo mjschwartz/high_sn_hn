@@ -6,8 +6,8 @@
 # Example:
 #
 
-set :output, '/home/deploy/'
+set :output, '/home/deploy/high_sn_hn/log/cron.log'
 
 every '*/5 * * * *' do
-  rake "my:rake:task"
+  rake "find_high_id"
 end

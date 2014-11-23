@@ -24,6 +24,12 @@ desc 'Run both the process and the tweet steps'
 task :cron => [:process_homepage, :tweet_items]
 
 
+desc 'Find the current high id'
+task :find_high_id do
+  require './app'
+  Resque.enqueue(HighSnHn::HighIdWorker)
+end
+
 desc 'Load envt for Resque'
 task 'resque:setup' do
   require './app'
