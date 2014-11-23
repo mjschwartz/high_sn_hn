@@ -9,5 +9,11 @@
 set :output, '/home/deploy/high_sn_hn/log/cron.log'
 
 every '*/5 * * * *' do
-  rake "find_high_id"
+  command "/bin/bash -l -c 'cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake find_high_id --silent >> /home/deploy/high_sn_hn/log/cron.log 2>&1'"
+  #rake "fill_story_ids"
+end
+
+every :hour do
+  command "/bin/bash -l -c 'cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake fill_story_ids --silent >> /home/deploy/high_sn_hn/log/cron.log 2>&1'"
+  #rake "fill_story_ids"
 end

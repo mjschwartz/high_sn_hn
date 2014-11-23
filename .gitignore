@@ -4,3 +4,4 @@
 config/app_secret.yml
 config/database.yml
 dump.rdb
+log/

@@ -30,6 +30,13 @@ task :find_high_id do
   Resque.enqueue(HighSnHn::HighIdWorker)
 end
 
+desc 'Find the current high id'
+task :fill_story_ids do
+  require './app'
+  HighSnHn::Comment.where(story_id: nil).map {|x| x.send(:fill_in_story)}
+end
+
+
 desc 'Load envt for Resque'
 task 'resque:setup' do
   require './app'

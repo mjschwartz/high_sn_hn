@@ -24,7 +24,7 @@ module HighSnHn
       # there wasn't a story with that ID - look for a comment
       c = HighSnHn::Comment.where(hn_id: parent).first
       return c.parent_story_id if c
-      # welp - we have to have it fetched.  Will let the rake task fill it in
+      # welp, we don't have it - have it fetched.
       LOGGER.info("enqueuing a fetch for parent Comment#{id}")
       Resque.enqueue(HighSnHn::ItemsWorker, parent, parent)
       return nil
@@ -44,9 +44,7 @@ module HighSnHn
 
     def spread_story_to_children
       return unless story_id
-      HighSnHn::Comment.where(parent: hn_id)
-        .where(story_id: nil)
-        .update_all(story_id: story_id)
+      HighSnHn::Comment.where(parent: hn_id).each { |c| c.update_attribute(:story_id, story_id) }
     end
 
   end

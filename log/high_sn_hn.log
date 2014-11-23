@@ -4178,3 +4178,502 @@ I, [2014-11-22T12:30:25.541993 #26998]  INFO -- : Fetching HnItem #8643059
 I, [2014-11-22T12:30:26.090239 #26998]  INFO -- : enqueuing a fetch for parent Comment2060
 I, [2014-11-22T12:30:26.102153 #26999]  INFO -- : Fetching HnItem #8645660
 I, [2014-11-22T12:30:26.678307 #27000]  INFO -- : Fetching HnItem #8640756
+I, [2014-11-23T08:35:14.286289 #28648]  INFO -- : Fetching current high id
+I, [2014-11-23T08:35:14.668290 #28648]  INFO -- : High id now 8648879
+I, [2014-11-23T08:43:25.132689 #28683]  INFO -- : Fetching current high id
+I, [2014-11-23T08:43:25.822893 #28683]  INFO -- : High id now 8648892
+I, [2014-11-23T08:43:25.836397 #28684]  INFO -- : Fetching HnItem #8648880
+I, [2014-11-23T08:43:26.435196 #28684]  INFO -- : enqueuing a fetch for parent Comment2061
+I, [2014-11-23T08:43:26.438248 #28684]  INFO -- : Fetching HnItem #8648881
+I, [2014-11-23T08:43:26.731162 #28684]  INFO -- : enqueuing a fetch for parent Comment2062
+I, [2014-11-23T08:43:26.733005 #28684]  INFO -- : Fetching HnItem #8648882
+I, [2014-11-23T08:43:27.040832 #28684]  INFO -- : enqueuing a fetch for parent Comment2063
+I, [2014-11-23T08:43:27.042654 #28684]  INFO -- : Fetching HnItem #8648883
+I, [2014-11-23T08:43:27.337029 #28684]  INFO -- : enqueuing a fetch for parent Comment2064
+I, [2014-11-23T08:43:27.338984 #28684]  INFO -- : Fetching HnItem #8648884
+I, [2014-11-23T08:43:27.639944 #28684]  INFO -- : enqueuing a fetch for parent Comment2065
+I, [2014-11-23T08:43:27.642110 #28684]  INFO -- : Fetching HnItem #8648885
+I, [2014-11-23T08:43:27.953405 #28684]  INFO -- : enqueuing a fetch for parent Comment2066
+I, [2014-11-23T08:43:27.955069 #28684]  INFO -- : Fetching HnItem #8648886
+I, [2014-11-23T08:43:28.251698 #28684]  INFO -- : enqueuing a fetch for parent Comment2067
+I, [2014-11-23T08:43:28.253457 #28684]  INFO -- : Fetching HnItem #8648887
+I, [2014-11-23T08:43:28.560788 #28684]  INFO -- : Fetching HnItem #8648888
+I, [2014-11-23T08:43:28.862016 #28684]  INFO -- : enqueuing a fetch for parent Comment2068
+I, [2014-11-23T08:43:28.863992 #28684]  INFO -- : Fetching HnItem #8648889
+I, [2014-11-23T08:43:29.169814 #28684]  INFO -- : enqueuing a fetch for parent Comment2069
+I, [2014-11-23T08:43:29.171649 #28684]  INFO -- : Fetching HnItem #8648890
+I, [2014-11-23T08:43:29.476644 #28684]  INFO -- : enqueuing a fetch for parent Comment2070
+I, [2014-11-23T08:43:29.478257 #28684]  INFO -- : Fetching HnItem #8648891
+I, [2014-11-23T08:43:29.792825 #28684]  INFO -- : enqueuing a fetch for parent Comment2071
+I, [2014-11-23T08:43:29.795148 #28684]  INFO -- : Fetching HnItem #8648892
+I, [2014-11-23T08:43:30.093044 #28684]  INFO -- : enqueuing a fetch for parent Comment2072
+I, [2014-11-23T08:43:30.108548 #28686]  INFO -- : Fetching HnItem #8648760
+I, [2014-11-23T08:43:30.473292 #28686]  INFO -- : enqueuing a fetch for parent Comment2073
+I, [2014-11-23T08:43:30.486847 #28687]  INFO -- : Fetching HnItem #8648511
+I, [2014-11-23T08:43:30.843849 #28687]  INFO -- : enqueuing a fetch for parent Comment2074
+I, [2014-11-23T08:43:30.857753 #28688]  INFO -- : Fetching HnItem #8648555
+I, [2014-11-23T08:43:31.210258 #28688]  INFO -- : enqueuing a fetch for parent Comment2075
+I, [2014-11-23T08:43:31.225011 #28689]  INFO -- : Fetching HnItem #8648061
+I, [2014-11-23T08:43:31.582477 #28689]  INFO -- : enqueuing a fetch for parent Comment2076
+I, [2014-11-23T08:43:31.596136 #28690]  INFO -- : Fetching HnItem #8648623
+I, [2014-11-23T08:43:31.951329 #28690]  INFO -- : enqueuing a fetch for parent Comment2077
+I, [2014-11-23T08:43:31.964867 #28691]  INFO -- : Fetching HnItem #8648504
+I, [2014-11-23T08:43:32.316534 #28691]  INFO -- : enqueuing a fetch for parent Comment2078
+I, [2014-11-23T08:43:32.331063 #28692]  INFO -- : Fetching HnItem #8648287
+I, [2014-11-23T08:43:32.714890 #28693]  INFO -- : Fetching HnItem #8648730
+I, [2014-11-23T08:43:33.097529 #28694]  INFO -- : Fetching HnItem #8648385
+I, [2014-11-23T08:43:33.474957 #28694]  INFO -- : enqueuing a fetch for parent Comment2079
+I, [2014-11-23T08:43:33.496927 #28695]  INFO -- : Fetching HnItem #8648102
+I, [2014-11-23T08:43:33.880481 #28696]  INFO -- : Fetching HnItem #8648789
+I, [2014-11-23T08:43:35.298383 #28696]  INFO -- : enqueuing a fetch for parent Comment2080
+I, [2014-11-23T08:43:35.312611 #28698]  INFO -- : Fetching HnItem #8648342
+I, [2014-11-23T08:43:35.678200 #28698]  INFO -- : enqueuing a fetch for parent Comment2081
+I, [2014-11-23T08:43:35.693155 #28699]  INFO -- : Fetching HnItem #8648721
+I, [2014-11-23T08:43:36.060272 #28699]  INFO -- : enqueuing a fetch for parent Comment2082
+I, [2014-11-23T08:43:36.075348 #28700]  INFO -- : Fetching HnItem #8647606
+I, [2014-11-23T08:43:36.451265 #28701]  INFO -- : Fetching HnItem #8648539
+I, [2014-11-23T08:43:36.838075 #28702]  INFO -- : Fetching HnItem #8647655
+I, [2014-11-23T08:43:37.213677 #28702]  INFO -- : enqueuing a fetch for parent Comment2083
+I, [2014-11-23T08:43:37.227983 #28703]  INFO -- : Fetching HnItem #8648504
+I, [2014-11-23T08:43:37.286090 #28703]  INFO -- : this came back complete {"id"=>2078, "story_id"=>nil, "parent"=>8648461, "hn_id"=>8648504, "author"=>"signa11", "created_at"=>2014-11-23 11:44:38 UTC, "updated_at"=>2014-11-23 14:43:32 UTC}
+I, [2014-11-23T08:43:37.301770 #28704]  INFO -- : Fetching HnItem #8648461
+I, [2014-11-23T08:43:37.660805 #28704]  INFO -- : enqueuing a fetch for parent Comment2084
+I, [2014-11-23T08:43:37.675122 #28705]  INFO -- : Fetching HnItem #8648378
+I, [2014-11-23T08:43:38.471128 #28705]  INFO -- : enqueuing a fetch for parent Comment2085
+I, [2014-11-23T08:43:38.484928 #28706]  INFO -- : Fetching HnItem #8648754
+I, [2014-11-23T08:43:38.852239 #28706]  INFO -- : enqueuing a fetch for parent Comment2086
+I, [2014-11-23T08:43:38.865864 #28707]  INFO -- : Fetching HnItem #8648294
+I, [2014-11-23T08:43:39.265523 #28708]  INFO -- : Fetching HnItem #8648708
+I, [2014-11-23T08:43:39.620946 #28708]  INFO -- : enqueuing a fetch for parent Comment2087
+I, [2014-11-23T08:43:39.635699 #28709]  INFO -- : Fetching HnItem #8646750
+I, [2014-11-23T08:43:40.027935 #28710]  INFO -- : Fetching HnItem #8648280
+I, [2014-11-23T08:43:40.416266 #28711]  INFO -- : Fetching HnItem #8648070
+I, [2014-11-23T08:43:40.773430 #28711]  INFO -- : enqueuing a fetch for parent Comment2088
+I, [2014-11-23T08:43:40.786966 #28712]  INFO -- : Fetching HnItem #8648664
+I, [2014-11-23T08:43:41.166798 #28712]  INFO -- : enqueuing a fetch for parent Comment2089
+I, [2014-11-23T08:43:41.180922 #28713]  INFO -- : Fetching HnItem #8648673
+I, [2014-11-23T08:43:41.554920 #28713]  INFO -- : enqueuing a fetch for parent Comment2090
+I, [2014-11-23T08:43:41.583241 #28714]  INFO -- : Fetching HnItem #8647943
+I, [2014-11-23T08:43:41.978998 #28715]  INFO -- : Fetching HnItem #8648220
+I, [2014-11-23T08:43:42.367744 #28716]  INFO -- : Fetching HnItem #8648437
+I, [2014-11-23T08:58:13.562707 #28768]  INFO -- : Fetching current high id
+I, [2014-11-23T08:58:13.875701 #28768]  INFO -- : High id now 8648919
+I, [2014-11-23T08:58:13.889350 #28769]  INFO -- : Fetching HnItem #8648893
+I, [2014-11-23T08:58:14.250810 #28769]  INFO -- : enqueuing a fetch for parent Comment2091
+I, [2014-11-23T08:58:14.253399 #28769]  INFO -- : Fetching HnItem #8648894
+I, [2014-11-23T08:58:14.543594 #28769]  INFO -- : enqueuing a fetch for parent Comment2092
+I, [2014-11-23T08:58:14.545330 #28769]  INFO -- : Fetching HnItem #8648895
+I, [2014-11-23T08:58:17.284630 #28769]  INFO -- : Fetching HnItem #8648896
+I, [2014-11-23T08:58:17.583167 #28769]  INFO -- : enqueuing a fetch for parent Comment2094
+I, [2014-11-23T08:58:17.585072 #28769]  INFO -- : Fetching HnItem #8648897
+I, [2014-11-23T08:58:17.875665 #28769]  INFO -- : enqueuing a fetch for parent Comment2095
+I, [2014-11-23T08:58:17.877247 #28769]  INFO -- : Fetching HnItem #8648898
+I, [2014-11-23T08:58:18.193561 #28769]  INFO -- : enqueuing a fetch for parent Comment2096
+I, [2014-11-23T08:58:18.195364 #28769]  INFO -- : Fetching HnItem #8648899
+I, [2014-11-23T08:58:18.487244 #28769]  INFO -- : enqueuing a fetch for parent Comment2097
+I, [2014-11-23T08:58:18.489112 #28769]  INFO -- : Fetching HnItem #8648900
+I, [2014-11-23T08:58:18.805220 #28769]  INFO -- : Fetching HnItem #8648901
+I, [2014-11-23T08:58:19.107935 #28769]  INFO -- : enqueuing a fetch for parent Comment2099
+I, [2014-11-23T08:58:19.115511 #28769]  INFO -- : Fetching HnItem #8648902
+I, [2014-11-23T08:58:19.403488 #28769]  INFO -- : enqueuing a fetch for parent Comment2100
+I, [2014-11-23T08:58:19.405202 #28769]  INFO -- : Fetching HnItem #8648903
+I, [2014-11-23T08:58:19.707130 #28769]  INFO -- : Fetching HnItem #8648904
+I, [2014-11-23T08:58:20.005552 #28769]  INFO -- : enqueuing a fetch for parent Comment2102
+I, [2014-11-23T08:58:20.007148 #28769]  INFO -- : Fetching HnItem #8648905
+I, [2014-11-23T08:58:20.294980 #28769]  INFO -- : enqueuing a fetch for parent Comment2103
+I, [2014-11-23T08:58:20.296853 #28769]  INFO -- : Fetching HnItem #8648906
+I, [2014-11-23T08:58:20.592785 #28769]  INFO -- : enqueuing a fetch for parent Comment2104
+I, [2014-11-23T08:58:20.594619 #28769]  INFO -- : Fetching HnItem #8648907
+I, [2014-11-23T08:58:22.148650 #28769]  INFO -- : Fetching HnItem #8648908
+I, [2014-11-23T08:58:22.439282 #28769]  INFO -- : enqueuing a fetch for parent Comment2105
+I, [2014-11-23T08:58:22.441052 #28769]  INFO -- : Fetching HnItem #8648909
+I, [2014-11-23T08:58:22.729722 #28769]  INFO -- : Fetching HnItem #8648910
+I, [2014-11-23T08:58:23.026858 #28769]  INFO -- : enqueuing a fetch for parent Comment2106
+I, [2014-11-23T08:58:23.028728 #28769]  INFO -- : Fetching HnItem #8648911
+I, [2014-11-23T08:58:23.320141 #28769]  INFO -- : Fetching HnItem #8648912
+I, [2014-11-23T08:58:23.628789 #28769]  INFO -- : enqueuing a fetch for parent Comment2108
+I, [2014-11-23T08:58:23.630562 #28769]  INFO -- : Fetching HnItem #8648913
+I, [2014-11-23T08:58:23.945474 #28769]  INFO -- : enqueuing a fetch for parent Comment2109
+I, [2014-11-23T08:58:23.947317 #28769]  INFO -- : Fetching HnItem #8648914
+I, [2014-11-23T08:58:24.241735 #28769]  INFO -- : enqueuing a fetch for parent Comment2110
+I, [2014-11-23T08:58:24.243285 #28769]  INFO -- : Fetching HnItem #8648915
+I, [2014-11-23T08:58:24.537142 #28769]  INFO -- : enqueuing a fetch for parent Comment2111
+I, [2014-11-23T08:58:24.538959 #28769]  INFO -- : Fetching HnItem #8648916
+I, [2014-11-23T08:58:24.835021 #28769]  INFO -- : Fetching HnItem #8648917
+I, [2014-11-23T08:58:25.124643 #28769]  INFO -- : Fetching HnItem #8648918
+I, [2014-11-23T08:58:25.414963 #28769]  INFO -- : enqueuing a fetch for parent Comment2113
+I, [2014-11-23T08:58:25.417094 #28769]  INFO -- : Fetching HnItem #8648919
+I, [2014-11-23T08:58:25.706404 #28769]  INFO -- : enqueuing a fetch for parent Comment2114
+I, [2014-11-23T08:58:25.723322 #28770]  INFO -- : Fetching HnItem #8647564
+I, [2014-11-23T08:58:26.087193 #28770]  INFO -- : enqueuing a fetch for parent Comment2115
+I, [2014-11-23T08:58:26.100610 #28771]  INFO -- : Fetching HnItem #8648770
+I, [2014-11-23T08:58:27.571242 #28772]  INFO -- : Fetching HnItem #8648295
+I, [2014-11-23T08:58:27.945848 #28772]  INFO -- : enqueuing a fetch for parent Comment2117
+I, [2014-11-23T08:58:27.960049 #28773]  INFO -- : Fetching HnItem #8647607
+I, [2014-11-23T08:58:28.350597 #28774]  INFO -- : Fetching HnItem #8648814
+I, [2014-11-23T08:58:28.722386 #28774]  INFO -- : enqueuing a fetch for parent Comment2118
+I, [2014-11-23T08:58:28.735405 #28775]  INFO -- : Fetching HnItem #8648530
+I, [2014-11-23T08:58:29.099437 #28775]  INFO -- : enqueuing a fetch for parent Comment2119
+I, [2014-11-23T08:58:29.112897 #28776]  INFO -- : Fetching HnItem #8648780
+I, [2014-11-23T08:58:29.457231 #28776]  INFO -- : enqueuing a fetch for parent Comment2120
+I, [2014-11-23T08:58:29.470467 #28777]  INFO -- : Fetching HnItem #8648600
+I, [2014-11-23T08:58:29.816037 #28777]  INFO -- : enqueuing a fetch for parent Comment2121
+I, [2014-11-23T08:58:29.829198 #28778]  INFO -- : Fetching HnItem #8648513
+I, [2014-11-23T08:58:30.189036 #28778]  INFO -- : enqueuing a fetch for parent Comment2122
+I, [2014-11-23T08:58:30.202149 #28779]  INFO -- : Fetching HnItem #8648382
+I, [2014-11-23T08:58:30.572425 #28780]  INFO -- : Fetching HnItem #8648780
+I, [2014-11-23T08:58:30.625866 #28780]  INFO -- : this came back complete {"id"=>2120, "story_id"=>nil, "parent"=>8648656, "hn_id"=>8648780, "author"=>"outworlder", "created_at"=>2014-11-23 13:47:19 UTC, "updated_at"=>2014-11-23 14:58:29 UTC}
+I, [2014-11-23T08:58:30.638448 #28781]  INFO -- : Fetching HnItem #8648875
+I, [2014-11-23T08:58:31.021151 #28782]  INFO -- : Fetching HnItem #8648738
+I, [2014-11-23T08:58:31.391968 #28784]  INFO -- : Fetching HnItem #8647718
+I, [2014-11-23T08:58:31.779393 #28785]  INFO -- : Fetching HnItem #8647178
+I, [2014-11-23T08:58:32.161904 #28785]  INFO -- : enqueuing a fetch for parent Comment2126
+I, [2014-11-23T08:58:32.174821 #28786]  INFO -- : Fetching HnItem #8648738
+I, [2014-11-23T08:58:32.228328 #28786]  INFO -- : this came back complete {"id"=>2125, "story_id"=>353, "parent"=>8648280, "hn_id"=>8648738, "author"=>"amelius", "created_at"=>2014-11-23 13:33:06 UTC, "updated_at"=>2014-11-23 14:58:31 UTC}
+I, [2014-11-23T08:58:32.240886 #28787]  INFO -- : Fetching HnItem #8648275
+I, [2014-11-23T08:58:32.602414 #28787]  INFO -- : enqueuing a fetch for parent Comment2127
+I, [2014-11-23T08:58:32.615944 #28788]  INFO -- : Fetching HnItem #8647397
+I, [2014-11-23T08:58:32.977897 #28788]  INFO -- : enqueuing a fetch for parent Comment2128
+I, [2014-11-23T08:58:32.991450 #28789]  INFO -- : Fetching HnItem #8648824
+I, [2014-11-23T08:58:33.359523 #28789]  INFO -- : enqueuing a fetch for parent Comment2129
+I, [2014-11-23T08:58:33.377306 #28790]  INFO -- : Fetching HnItem #8646646
+I, [2014-11-23T08:58:33.755908 #28791]  INFO -- : Fetching HnItem #8648166
+I, [2014-11-23T08:58:35.228489 #28792]  INFO -- : Fetching HnItem #8648669
+I, [2014-11-23T08:58:35.583462 #28792]  INFO -- : enqueuing a fetch for parent Comment2130
+I, [2014-11-23T08:58:35.596242 #28793]  INFO -- : Fetching HnItem #8648355
+I, [2014-11-23T08:58:35.959819 #28793]  INFO -- : enqueuing a fetch for parent Comment2131
+I, [2014-11-23T08:58:35.972070 #28794]  INFO -- : Fetching HnItem #8648656
+I, [2014-11-23T08:58:36.353523 #28795]  INFO -- : Fetching HnItem #8648593
+I, [2014-11-23T08:58:36.733503 #28796]  INFO -- : Fetching HnItem #8648277
+I, [2014-11-23T08:58:37.114582 #28796]  INFO -- : enqueuing a fetch for parent Comment2134
+I, [2014-11-23T08:58:37.128196 #28797]  INFO -- : Fetching HnItem #8646838
+I, [2014-11-23T08:58:37.486267 #28797]  INFO -- : enqueuing a fetch for parent Comment2135
+I, [2014-11-23T08:58:37.500441 #28798]  INFO -- : Fetching HnItem #8648262
+I, [2014-11-23T08:58:37.862164 #28798]  INFO -- : enqueuing a fetch for parent Comment2136
+I, [2014-11-23T08:58:37.874447 #28799]  INFO -- : Fetching HnItem #8646758
+I, [2014-11-23T08:58:38.271675 #28800]  INFO -- : Fetching HnItem #8648642
+I, [2014-11-23T08:58:38.649063 #28800]  INFO -- : enqueuing a fetch for parent Comment2137
+I, [2014-11-23T08:58:38.661581 #28801]  INFO -- : Fetching HnItem #8648617
+I, [2014-11-23T08:58:39.055838 #28802]  INFO -- : Fetching HnItem #8648207
+I, [2014-11-23T08:58:39.474619 #28803]  INFO -- : Fetching HnItem #8648213
+I, [2014-11-23T08:58:39.845631 #28804]  INFO -- : Fetching HnItem #8645251
+I, [2014-11-23T08:58:40.213708 #28805]  INFO -- : Fetching HnItem #8648256
+I, [2014-11-23T08:58:40.571083 #28805]  INFO -- : enqueuing a fetch for parent Comment2141
+I, [2014-11-23T08:58:40.584004 #28806]  INFO -- : Fetching HnItem #8648498
+I, [2014-11-23T08:58:40.942768 #28806]  INFO -- : enqueuing a fetch for parent Comment2142
+I, [2014-11-23T08:58:40.956222 #28807]  INFO -- : Fetching HnItem #8648240
+I, [2014-11-23T08:58:41.331990 #28808]  INFO -- : Fetching HnItem #8647656
+I, [2014-11-23T08:58:41.676301 #28808]  INFO -- : enqueuing a fetch for parent Comment2144
+I, [2014-11-23T08:58:41.689756 #28809]  INFO -- : Fetching HnItem #8647294
+I, [2014-11-23T08:58:42.032784 #28809]  INFO -- : enqueuing a fetch for parent Comment2145
+I, [2014-11-23T08:58:42.045394 #28810]  INFO -- : Fetching HnItem #8646948
+I, [2014-11-23T09:18:08.486123 #28891]  INFO -- : Fetching current high id
+I, [2014-11-23T09:18:09.276604 #28891]  INFO -- : High id now 8648951
+I, [2014-11-23T09:18:09.289469 #28892]  INFO -- : Fetching HnItem #8648920
+I, [2014-11-23T09:18:09.652503 #28892]  INFO -- : enqueuing a fetch for parent Comment2146
+I, [2014-11-23T09:18:09.656756 #28892]  INFO -- : Fetching HnItem #8648921
+I, [2014-11-23T09:18:09.971133 #28892]  INFO -- : Fetching HnItem #8648922
+I, [2014-11-23T09:18:10.283330 #28892]  INFO -- : enqueuing a fetch for parent Comment2148
+I, [2014-11-23T09:18:10.285033 #28892]  INFO -- : Fetching HnItem #8648923
+I, [2014-11-23T09:18:10.602036 #28892]  INFO -- : Fetching HnItem #8648924
+I, [2014-11-23T09:18:10.904223 #28892]  INFO -- : enqueuing a fetch for parent Comment2149
+I, [2014-11-23T09:18:10.905833 #28892]  INFO -- : Fetching HnItem #8648925
+I, [2014-11-23T09:18:11.200782 #28892]  INFO -- : Fetching HnItem #8648926
+I, [2014-11-23T09:18:11.495654 #28892]  INFO -- : Fetching HnItem #8648927
+I, [2014-11-23T09:18:11.786950 #28892]  INFO -- : enqueuing a fetch for parent Comment2152
+I, [2014-11-23T09:18:11.788528 #28892]  INFO -- : Fetching HnItem #8648928
+I, [2014-11-23T09:18:13.141016 #28892]  INFO -- : enqueuing a fetch for parent Comment2153
+I, [2014-11-23T09:18:13.142696 #28892]  INFO -- : Fetching HnItem #8648929
+I, [2014-11-23T09:18:13.448902 #28892]  INFO -- : enqueuing a fetch for parent Comment2154
+I, [2014-11-23T09:18:13.450575 #28892]  INFO -- : Fetching HnItem #8648930
+I, [2014-11-23T09:18:13.750672 #28892]  INFO -- : Fetching HnItem #8648931
+I, [2014-11-23T09:18:14.116932 #28892]  INFO -- : enqueuing a fetch for parent Comment2156
+I, [2014-11-23T09:18:14.118583 #28892]  INFO -- : Fetching HnItem #8648932
+I, [2014-11-23T09:18:14.413596 #28892]  INFO -- : Fetching HnItem #8648933
+I, [2014-11-23T09:18:14.713007 #28892]  INFO -- : Fetching HnItem #8648934
+I, [2014-11-23T09:18:15.008684 #28892]  INFO -- : enqueuing a fetch for parent Comment2158
+I, [2014-11-23T09:18:15.010510 #28892]  INFO -- : Fetching HnItem #8648935
+I, [2014-11-23T09:18:15.316771 #28892]  INFO -- : Fetching HnItem #8648936
+I, [2014-11-23T09:18:15.620773 #28892]  INFO -- : Fetching HnItem #8648937
+I, [2014-11-23T09:18:15.918678 #28892]  INFO -- : enqueuing a fetch for parent Comment2161
+I, [2014-11-23T09:18:15.920551 #28892]  INFO -- : Fetching HnItem #8648938
+I, [2014-11-23T09:18:16.216279 #28892]  INFO -- : enqueuing a fetch for parent Comment2162
+I, [2014-11-23T09:18:16.218121 #28892]  INFO -- : Fetching HnItem #8648939
+I, [2014-11-23T09:18:16.684450 #28892]  INFO -- : Fetching HnItem #8648940
+I, [2014-11-23T09:18:16.985723 #28892]  INFO -- : Fetching HnItem #8648941
+I, [2014-11-23T09:18:17.278301 #28892]  INFO -- : enqueuing a fetch for parent Comment2164
+I, [2014-11-23T09:18:17.280064 #28892]  INFO -- : Fetching HnItem #8648942
+I, [2014-11-23T09:18:17.580464 #28892]  INFO -- : enqueuing a fetch for parent Comment2165
+I, [2014-11-23T09:18:17.582070 #28892]  INFO -- : Fetching HnItem #8648943
+I, [2014-11-23T09:18:17.879291 #28892]  INFO -- : Fetching HnItem #8648944
+I, [2014-11-23T09:18:18.172988 #28892]  INFO -- : enqueuing a fetch for parent Comment2167
+I, [2014-11-23T09:18:18.175141 #28892]  INFO -- : Fetching HnItem #8648945
+I, [2014-11-23T09:18:18.517964 #28892]  INFO -- : enqueuing a fetch for parent Comment2148
+I, [2014-11-23T09:18:18.519687 #28892]  INFO -- : Fetching HnItem #8648946
+I, [2014-11-23T09:18:18.815282 #28892]  INFO -- : Fetching HnItem #8648947
+I, [2014-11-23T09:18:19.100665 #28892]  INFO -- : Fetching HnItem #8648948
+I, [2014-11-23T09:18:19.393142 #28892]  INFO -- : Fetching HnItem #8648949
+I, [2014-11-23T09:18:19.697964 #28892]  INFO -- : Fetching HnItem #8648950
+I, [2014-11-23T09:18:19.992287 #28892]  INFO -- : enqueuing a fetch for parent Comment2172
+I, [2014-11-23T09:18:19.993931 #28892]  INFO -- : Fetching HnItem #8648951
+I, [2014-11-23T09:18:20.308718 #28893]  INFO -- : Fetching HnItem #8648670
+I, [2014-11-23T09:18:20.673670 #28893]  INFO -- : enqueuing a fetch for parent Comment2174
+I, [2014-11-23T09:18:20.689203 #28894]  INFO -- : Fetching HnItem #8648768
+I, [2014-11-23T09:18:21.092986 #28895]  INFO -- : Fetching HnItem #8648552
+I, [2014-11-23T09:18:21.480469 #28896]  INFO -- : Fetching HnItem #8643291
+I, [2014-11-23T09:18:21.875134 #28896]  INFO -- : enqueuing a fetch for parent Comment2176
+I, [2014-11-23T09:18:21.890077 #28897]  INFO -- : Fetching HnItem #8647790
+I, [2014-11-23T09:18:22.255929 #28897]  INFO -- : enqueuing a fetch for parent Comment2177
+I, [2014-11-23T09:18:22.271009 #28898]  INFO -- : Fetching HnItem #8648564
+I, [2014-11-23T09:18:22.670728 #28899]  INFO -- : Fetching HnItem #8648472
+I, [2014-11-23T09:18:23.048221 #28899]  INFO -- : enqueuing a fetch for parent Comment2178
+I, [2014-11-23T09:18:23.062951 #28900]  INFO -- : Fetching HnItem #8642002
+I, [2014-11-23T09:18:23.431284 #28900]  INFO -- : enqueuing a fetch for parent Comment2179
+I, [2014-11-23T09:18:23.446524 #28901]  INFO -- : Fetching HnItem #8644822
+I, [2014-11-23T09:18:23.849019 #28902]  INFO -- : Fetching HnItem #8648457
+I, [2014-11-23T09:18:24.256822 #28903]  INFO -- : Fetching HnItem #8648628
+I, [2014-11-23T09:18:24.642291 #28903]  INFO -- : enqueuing a fetch for parent Comment2181
+I, [2014-11-23T09:18:24.658182 #28904]  INFO -- : Fetching HnItem #8648037
+I, [2014-11-23T09:18:25.060867 #28905]  INFO -- : Fetching HnItem #8648313
+I, [2014-11-23T09:18:25.440749 #28905]  INFO -- : enqueuing a fetch for parent Comment2183
+I, [2014-11-23T09:18:25.455039 #28906]  INFO -- : Fetching HnItem #8648768
+I, [2014-11-23T09:18:25.517348 #28906]  INFO -- : this came back complete {"id"=>371, "hn_id"=>8648768, "author"=>"cstross", "title"=>"Let's put the future behind us", "url"=>"http://www.antipope.org/charlie/blog-static/2014/11/lets-put-the-future-behind-us-1.html", "created_at"=>2014-11-23 13:42:25 UTC, "updated_at"=>2014-11-23 15:18:21 UTC}
+I, [2014-11-23T09:18:25.530974 #28907]  INFO -- : Fetching HnItem #8647243
+I, [2014-11-23T09:18:25.929192 #28909]  INFO -- : Fetching HnItem #8648612
+I, [2014-11-23T09:18:26.704846 #28909]  INFO -- : enqueuing a fetch for parent Comment2185
+I, [2014-11-23T09:18:26.719343 #28910]  INFO -- : Fetching HnItem #8643049
+I, [2014-11-23T09:18:27.133898 #28911]  INFO -- : Fetching HnItem #8647760
+I, [2014-11-23T09:18:27.522972 #28912]  INFO -- : Fetching HnItem #8648328
+I, [2014-11-23T09:18:27.917232 #28913]  INFO -- : Fetching HnItem #8640884
+I, [2014-11-23T09:18:28.328744 #28914]  INFO -- : Fetching HnItem #8646781
+I, [2014-11-23T09:18:29.798829 #28915]  INFO -- : Fetching HnItem #8647984
+I, [2014-11-23T09:18:30.173901 #28915]  INFO -- : enqueuing a fetch for parent Comment2188
+I, [2014-11-23T09:18:30.188273 #28916]  INFO -- : Fetching HnItem #8648525
+I, [2014-11-23T09:18:30.557522 #28916]  INFO -- : enqueuing a fetch for parent Comment2189
+I, [2014-11-23T09:18:30.571937 #28917]  INFO -- : Fetching HnItem #8647909
+I, [2014-11-23T09:18:31.037791 #28917]  INFO -- : enqueuing a fetch for parent Comment2190
+I, [2014-11-23T09:18:31.051841 #28918]  INFO -- : Fetching HnItem #8648423
+I, [2014-11-23T09:18:31.471696 #28919]  INFO -- : Fetching HnItem #8647849
+I, [2014-11-23T09:18:31.863000 #28919]  INFO -- : enqueuing a fetch for parent Comment2192
+I, [2014-11-23T09:18:31.878175 #28920]  INFO -- : Fetching HnItem #8647675
+I, [2014-11-23T09:18:32.259628 #28920]  INFO -- : enqueuing a fetch for parent Comment2193
+I, [2014-11-23T09:18:32.274698 #28921]  INFO -- : Fetching HnItem #8647631
+I, [2014-11-23T09:18:32.654904 #28921]  INFO -- : enqueuing a fetch for parent Comment2194
+I, [2014-11-23T09:18:32.670044 #28922]  INFO -- : Fetching HnItem #8646860
+I, [2014-11-23T09:33:03.891655 #29009]  INFO -- : Fetching current high id
+I, [2014-11-23T09:33:04.664786 #29009]  INFO -- : High id now 8648984
+I, [2014-11-23T09:33:04.680083 #29010]  INFO -- : Fetching HnItem #8648952
+I, [2014-11-23T09:33:05.053713 #29010]  INFO -- : enqueuing a fetch for parent Comment2195
+I, [2014-11-23T09:33:05.062204 #29010]  INFO -- : Fetching HnItem #8648953
+I, [2014-11-23T09:33:05.351240 #29010]  INFO -- : enqueuing a fetch for parent Comment2196
+I, [2014-11-23T09:33:05.352942 #29010]  INFO -- : Fetching HnItem #8648954
+I, [2014-11-23T09:33:05.663417 #29010]  INFO -- : Fetching HnItem #8648955
+I, [2014-11-23T09:33:05.963356 #29010]  INFO -- : Fetching HnItem #8648956
+I, [2014-11-23T09:33:06.274097 #29010]  INFO -- : Fetching HnItem #8648957
+I, [2014-11-23T09:33:06.570489 #29010]  INFO -- : Fetching HnItem #8648958
+I, [2014-11-23T09:33:07.056131 #29010]  INFO -- : enqueuing a fetch for parent Comment2200
+I, [2014-11-23T09:33:07.057993 #29010]  INFO -- : Fetching HnItem #8648959
+I, [2014-11-23T09:33:07.361406 #29010]  INFO -- : enqueuing a fetch for parent Comment2201
+I, [2014-11-23T09:33:07.363365 #29010]  INFO -- : Fetching HnItem #8648960
+I, [2014-11-23T09:33:07.655381 #29010]  INFO -- : Fetching HnItem #8648961
+I, [2014-11-23T09:33:07.946227 #29010]  INFO -- : enqueuing a fetch for parent Comment2203
+I, [2014-11-23T09:33:07.948097 #29010]  INFO -- : Fetching HnItem #8648962
+I, [2014-11-23T09:33:08.254537 #29010]  INFO -- : Fetching HnItem #8648963
+I, [2014-11-23T09:33:08.545615 #29010]  INFO -- : enqueuing a fetch for parent Comment2205
+I, [2014-11-23T09:33:08.547521 #29010]  INFO -- : Fetching HnItem #8648964
+I, [2014-11-23T09:33:08.844751 #29010]  INFO -- : enqueuing a fetch for parent Comment2206
+I, [2014-11-23T09:33:08.846738 #29010]  INFO -- : Fetching HnItem #8648965
+I, [2014-11-23T09:33:09.149600 #29010]  INFO -- : enqueuing a fetch for parent Comment2207
+I, [2014-11-23T09:33:09.151675 #29010]  INFO -- : Fetching HnItem #8648966
+I, [2014-11-23T09:33:09.446697 #29010]  INFO -- : Fetching HnItem #8648967
+I, [2014-11-23T09:33:10.806160 #29010]  INFO -- : enqueuing a fetch for parent Comment2209
+I, [2014-11-23T09:33:10.808133 #29010]  INFO -- : Fetching HnItem #8648968
+I, [2014-11-23T09:33:12.495215 #29010]  INFO -- : Fetching HnItem #8648969
+I, [2014-11-23T09:33:12.782958 #29010]  INFO -- : Fetching HnItem #8648970
+I, [2014-11-23T09:33:13.098439 #29010]  INFO -- : Fetching HnItem #8648971
+I, [2014-11-23T09:33:13.385372 #29010]  INFO -- : enqueuing a fetch for parent Comment2213
+I, [2014-11-23T09:33:13.387298 #29010]  INFO -- : Fetching HnItem #8648972
+I, [2014-11-23T09:33:13.678446 #29010]  INFO -- : Fetching HnItem #8648973
+I, [2014-11-23T09:33:13.978206 #29010]  INFO -- : enqueuing a fetch for parent Comment2215
+I, [2014-11-23T09:33:13.979898 #29010]  INFO -- : Fetching HnItem #8648974
+I, [2014-11-23T09:33:14.272990 #29010]  INFO -- : Fetching HnItem #8648975
+I, [2014-11-23T09:33:14.566146 #29010]  INFO -- : enqueuing a fetch for parent Comment2217
+I, [2014-11-23T09:33:14.568094 #29010]  INFO -- : Fetching HnItem #8648976
+I, [2014-11-23T09:33:14.871335 #29010]  INFO -- : Fetching HnItem #8648977
+I, [2014-11-23T09:33:15.171666 #29010]  INFO -- : enqueuing a fetch for parent Comment2219
+I, [2014-11-23T09:33:15.173278 #29010]  INFO -- : Fetching HnItem #8648978
+I, [2014-11-23T09:33:15.474770 #29010]  INFO -- : enqueuing a fetch for parent Comment2220
+I, [2014-11-23T09:33:15.476560 #29010]  INFO -- : Fetching HnItem #8648979
+I, [2014-11-23T09:33:15.775595 #29010]  INFO -- : enqueuing a fetch for parent Comment2221
+I, [2014-11-23T09:33:15.777205 #29010]  INFO -- : Fetching HnItem #8648980
+I, [2014-11-23T09:33:16.077169 #29010]  INFO -- : enqueuing a fetch for parent Comment2222
+I, [2014-11-23T09:33:16.078797 #29010]  INFO -- : Fetching HnItem #8648981
+I, [2014-11-23T09:33:16.384099 #29010]  INFO -- : enqueuing a fetch for parent Comment2223
+I, [2014-11-23T09:33:16.385692 #29010]  INFO -- : Fetching HnItem #8648982
+I, [2014-11-23T09:33:17.259724 #29010]  INFO -- : enqueuing a fetch for parent Comment2224
+I, [2014-11-23T09:33:17.261337 #29010]  INFO -- : Fetching HnItem #8648983
+I, [2014-11-23T09:33:17.549343 #29010]  INFO -- : enqueuing a fetch for parent Comment2209
+I, [2014-11-23T09:33:17.551036 #29010]  INFO -- : Fetching HnItem #8648984
+I, [2014-11-23T09:33:17.863372 #29012]  INFO -- : Fetching HnItem #8648758
+I, [2014-11-23T09:33:18.251010 #29013]  INFO -- : Fetching HnItem #8624153
+I, [2014-11-23T09:33:18.613717 #29013]  INFO -- : enqueuing a fetch for parent Comment2227
+I, [2014-11-23T09:33:18.627370 #29014]  INFO -- : Fetching HnItem #8646625
+I, [2014-11-23T09:33:19.020787 #29014]  INFO -- : enqueuing a fetch for parent Comment2228
+I, [2014-11-23T09:33:19.034976 #29015]  INFO -- : Fetching HnItem #8648208
+I, [2014-11-23T09:33:19.404827 #29015]  INFO -- : enqueuing a fetch for parent Comment2229
+I, [2014-11-23T09:33:19.419010 #29016]  INFO -- : Fetching HnItem #8648253
+I, [2014-11-23T09:33:19.797684 #29017]  INFO -- : Fetching HnItem #8648715
+I, [2014-11-23T09:33:20.201795 #29018]  INFO -- : Fetching HnItem #8648006
+I, [2014-11-23T09:33:20.606198 #29018]  INFO -- : enqueuing a fetch for parent Comment2230
+I, [2014-11-23T09:33:20.619205 #29019]  INFO -- : Fetching HnItem #8648490
+I, [2014-11-23T09:33:20.981421 #29019]  INFO -- : enqueuing a fetch for parent Comment2231
+I, [2014-11-23T09:33:20.996009 #29020]  INFO -- : Fetching HnItem #8647888
+I, [2014-11-23T09:33:21.364874 #29020]  INFO -- : enqueuing a fetch for parent Comment2232
+I, [2014-11-23T09:33:21.378296 #29021]  INFO -- : Fetching HnItem #8648104
+I, [2014-11-23T09:33:21.735654 #29021]  INFO -- : enqueuing a fetch for parent Comment2233
+I, [2014-11-23T09:33:21.749495 #29022]  INFO -- : Fetching HnItem #8648247
+I, [2014-11-23T09:33:22.111599 #29022]  INFO -- : enqueuing a fetch for parent Comment2234
+I, [2014-11-23T09:33:22.125188 #29023]  INFO -- : Fetching HnItem #8648715
+I, [2014-11-23T09:33:22.177458 #29023]  INFO -- : this came back complete {"id"=>381, "hn_id"=>8648715, "author"=>"flowerpot", "title"=>"Fix a page in Barbie's book", "url"=>"http://computer-engineer-barbie.herokuapp.com/", "created_at"=>2014-11-23 13:23:25 UTC, "updated_at"=>2014-11-23 15:33:20 UTC}
+I, [2014-11-23T09:33:22.190741 #29024]  INFO -- : Fetching HnItem #8648762
+I, [2014-11-23T09:33:22.573916 #29025]  INFO -- : Fetching HnItem #8648714
+I, [2014-11-23T09:33:22.947908 #29025]  INFO -- : enqueuing a fetch for parent Comment2235
+I, [2014-11-23T09:33:22.960824 #29026]  INFO -- : Fetching HnItem #8647888
+I, [2014-11-23T09:33:23.019438 #29026]  INFO -- : this came back complete {"id"=>2232, "story_id"=>nil, "parent"=>8646609, "hn_id"=>8647888, "author"=>"ANTSANTS", "created_at"=>2014-11-23 05:19:53 UTC, "updated_at"=>2014-11-23 15:33:21 UTC}
+I, [2014-11-23T09:33:23.032255 #29027]  INFO -- : Fetching HnItem #8648715
+I, [2014-11-23T09:33:23.082006 #29027]  INFO -- : this came back complete {"id"=>381, "hn_id"=>8648715, "author"=>"flowerpot", "title"=>"Fix a page in Barbie's book", "url"=>"http://computer-engineer-barbie.herokuapp.com/", "created_at"=>2014-11-23 13:23:25 UTC, "updated_at"=>2014-11-23 15:33:20 UTC}
+I, [2014-11-23T09:33:23.095025 #29028]  INFO -- : Fetching HnItem #8648234
+I, [2014-11-23T09:33:23.543133 #29029]  INFO -- : Fetching HnItem #8648715
+I, [2014-11-23T09:33:23.600258 #29029]  INFO -- : this came back complete {"id"=>381, "hn_id"=>8648715, "author"=>"flowerpot", "title"=>"Fix a page in Barbie's book", "url"=>"http://computer-engineer-barbie.herokuapp.com/", "created_at"=>2014-11-23 13:23:25 UTC, "updated_at"=>2014-11-23 15:33:20 UTC}
+I, [2014-11-23T09:33:23.613223 #29030]  INFO -- : Fetching HnItem #8647888
+I, [2014-11-23T09:33:23.671616 #29030]  INFO -- : this came back complete {"id"=>2232, "story_id"=>nil, "parent"=>8646609, "hn_id"=>8647888, "author"=>"ANTSANTS", "created_at"=>2014-11-23 05:19:53 UTC, "updated_at"=>2014-11-23 15:33:21 UTC}
+I, [2014-11-23T09:33:23.683176 #29031]  INFO -- : Fetching HnItem #8623440
+I, [2014-11-23T09:33:24.161539 #29032]  INFO -- : Fetching HnItem #8637343
+I, [2014-11-23T09:33:24.567326 #29034]  INFO -- : Fetching HnItem #8647338
+I, [2014-11-23T09:33:24.960111 #29034]  INFO -- : enqueuing a fetch for parent Comment2236
+I, [2014-11-23T09:33:24.973368 #29035]  INFO -- : Fetching HnItem #8646471
+I, [2014-11-23T09:33:25.347177 #29035]  INFO -- : enqueuing a fetch for parent Comment2237
+I, [2014-11-23T09:33:25.361162 #29036]  INFO -- : Fetching HnItem #8646930
+I, [2014-11-23T09:33:25.730466 #29036]  INFO -- : enqueuing a fetch for parent Comment2238
+I, [2014-11-23T09:33:25.744681 #29037]  INFO -- : Fetching HnItem #8646609
+I, [2014-11-23T09:33:26.099310 #29037]  INFO -- : enqueuing a fetch for parent Comment2239
+I, [2014-11-23T09:33:26.114285 #29038]  INFO -- : Fetching HnItem #8648014
+I, [2014-11-23T09:33:26.479719 #29038]  INFO -- : enqueuing a fetch for parent Comment2240
+I, [2014-11-23T09:33:26.493101 #29039]  INFO -- : Fetching HnItem #8647900
+I, [2014-11-23T09:33:26.886556 #29040]  INFO -- : Fetching HnItem #8648134
+I, [2014-11-23T09:33:28.384001 #29040]  INFO -- : enqueuing a fetch for parent Comment2242
+I, [2014-11-23T09:33:28.398676 #29041]  INFO -- : Fetching HnItem #8646760
+I, [2014-11-23T09:33:28.768760 #29041]  INFO -- : enqueuing a fetch for parent Comment2239
+I, [2014-11-23T09:33:28.782770 #29042]  INFO -- : Fetching HnItem #8646329
+I, [2014-11-23T09:33:29.170122 #29043]  INFO -- : Fetching HnItem #8646590
+I, [2014-11-23T09:33:29.525511 #29043]  INFO -- : enqueuing a fetch for parent Comment2244
+I, [2014-11-23T09:33:29.538521 #29044]  INFO -- : Fetching HnItem #8646605
+I, [2014-11-23T09:33:29.931495 #29045]  INFO -- : Fetching HnItem #8647936
+I, [2014-11-23T09:33:30.695861 #29045]  INFO -- : enqueuing a fetch for parent Comment2245
+I, [2014-11-23T09:33:30.709900 #29046]  INFO -- : Fetching HnItem #8646355
+I, [2014-11-23T09:33:31.080540 #29046]  INFO -- : enqueuing a fetch for parent Comment2246
+I, [2014-11-23T09:33:31.094035 #29047]  INFO -- : Fetching HnItem #8646605
+I, [2014-11-23T09:33:31.147016 #29047]  INFO -- : this came back complete {"id"=>387, "hn_id"=>8646605, "author"=>"lsanger", "title"=>"Infobitt – A movement to do for the news what Wikipedia did for encyclopedias", "url"=>"http://www.infobitt.com/", "created_at"=>2014-11-22 20:44:56 UTC, "updated_at"=>2014-11-23 15:33:29 UTC}
+I, [2014-11-23T09:33:31.159668 #29048]  INFO -- : Fetching HnItem #8646396
+I, [2014-11-23T09:33:31.522788 #29048]  INFO -- : enqueuing a fetch for parent Comment2247
+I, [2014-11-23T09:33:31.537379 #29049]  INFO -- : Fetching HnItem #8647686
+I, [2014-11-23T09:33:32.972708 #29050]  INFO -- : Fetching HnItem #8646281
+I, [2014-11-23T09:33:33.340040 #29050]  INFO -- : enqueuing a fetch for parent Comment2248
+I, [2014-11-23T09:33:33.353334 #29051]  INFO -- : Fetching HnItem #8646291
+I, [2014-11-23T09:33:33.732515 #29051]  INFO -- : enqueuing a fetch for parent Comment2249
+I, [2014-11-23T09:33:33.747597 #29052]  INFO -- : Fetching HnItem #8643774
+I, [2014-11-23T09:33:34.147699 #29053]  INFO -- : Fetching HnItem #8646207
+I, [2014-11-23T09:33:34.516974 #29053]  INFO -- : enqueuing a fetch for parent Comment2250
+I, [2014-11-23T09:33:34.530427 #29054]  INFO -- : Fetching HnItem #8645781
+I, [2014-11-23T09:33:34.888639 #29054]  INFO -- : enqueuing a fetch for parent Comment2251
+I, [2014-11-23T09:33:34.902832 #29055]  INFO -- : Fetching HnItem #8645443
+I, [2014-11-23T09:39:13.209835 #29088]  INFO -- : Fetching current high id
+I, [2014-11-23T09:39:13.508360 #29088]  INFO -- : High id now 8649008
+I, [2014-11-23T09:39:13.520744 #29089]  INFO -- : Fetching HnItem #8648985
+I, [2014-11-23T09:39:13.877419 #29089]  INFO -- : enqueuing a fetch for parent Comment2252
+I, [2014-11-23T09:39:13.880020 #29089]  INFO -- : Fetching HnItem #8648986
+I, [2014-11-23T09:39:14.202143 #29089]  INFO -- : Fetching HnItem #8648987
+I, [2014-11-23T09:39:14.507474 #29089]  INFO -- : Fetching HnItem #8648988
+I, [2014-11-23T09:39:14.817150 #29089]  INFO -- : enqueuing a fetch for parent Comment2254
+I, [2014-11-23T09:39:14.819091 #29089]  INFO -- : Fetching HnItem #8648989
+I, [2014-11-23T09:39:15.109824 #29089]  INFO -- : enqueuing a fetch for parent Comment2255
+I, [2014-11-23T09:39:15.111864 #29089]  INFO -- : Fetching HnItem #8648990
+I, [2014-11-23T09:39:15.401695 #29089]  INFO -- : Fetching HnItem #8648991
+I, [2014-11-23T09:39:15.690972 #29089]  INFO -- : enqueuing a fetch for parent Comment2257
+I, [2014-11-23T09:39:15.693023 #29089]  INFO -- : Fetching HnItem #8648992
+I, [2014-11-23T09:39:15.977539 #29089]  INFO -- : enqueuing a fetch for parent Comment2258
+I, [2014-11-23T09:39:15.979536 #29089]  INFO -- : Fetching HnItem #8648993
+I, [2014-11-23T09:39:16.288351 #29089]  INFO -- : Fetching HnItem #8648994
+I, [2014-11-23T09:39:16.583560 #29089]  INFO -- : Fetching HnItem #8648995
+I, [2014-11-23T09:39:16.904025 #29089]  INFO -- : Fetching HnItem #8648996
+I, [2014-11-23T09:39:17.216253 #29089]  INFO -- : enqueuing a fetch for parent Comment2262
+I, [2014-11-23T09:39:17.217837 #29089]  INFO -- : Fetching HnItem #8648997
+I, [2014-11-23T09:39:17.511102 #29089]  INFO -- : enqueuing a fetch for parent Comment2263
+I, [2014-11-23T09:39:17.512783 #29089]  INFO -- : Fetching HnItem #8648998
+I, [2014-11-23T09:39:17.820251 #29089]  INFO -- : enqueuing a fetch for parent Comment2264
+I, [2014-11-23T09:39:17.821784 #29089]  INFO -- : Fetching HnItem #8648999
+I, [2014-11-23T09:39:19.622787 #29089]  INFO -- : Fetching HnItem #8649000
+I, [2014-11-23T09:39:19.912955 #29089]  INFO -- : Fetching HnItem #8649001
+I, [2014-11-23T09:39:20.208374 #29089]  INFO -- : enqueuing a fetch for parent Comment2266
+I, [2014-11-23T09:39:20.210003 #29089]  INFO -- : Fetching HnItem #8649002
+I, [2014-11-23T09:39:20.509839 #29089]  INFO -- : Fetching HnItem #8649003
+I, [2014-11-23T09:39:20.808089 #29089]  INFO -- : enqueuing a fetch for parent Comment2268
+I, [2014-11-23T09:39:20.809929 #29089]  INFO -- : Fetching HnItem #8649004
+I, [2014-11-23T09:39:22.497216 #29089]  INFO -- : Fetching HnItem #8649005
+I, [2014-11-23T09:39:24.125744 #29089]  INFO -- : enqueuing a fetch for parent Comment2270
+I, [2014-11-23T09:39:24.127597 #29089]  INFO -- : Fetching HnItem #8649006
+I, [2014-11-23T09:39:24.426763 #29089]  INFO -- : Fetching HnItem #8649007
+I, [2014-11-23T09:39:24.723197 #29089]  INFO -- : Fetching HnItem #8649008
+I, [2014-11-23T09:39:25.023286 #29089]  INFO -- : enqueuing a fetch for parent Comment2273
+I, [2014-11-23T09:39:25.038368 #29090]  INFO -- : Fetching HnItem #8648374
+I, [2014-11-23T09:39:25.385655 #29090]  INFO -- : enqueuing a fetch for parent Comment2274
+I, [2014-11-23T09:39:25.398973 #29091]  INFO -- : Fetching HnItem #8648855
+I, [2014-11-23T09:39:25.751841 #29091]  INFO -- : enqueuing a fetch for parent Comment2275
+I, [2014-11-23T09:39:25.764832 #29092]  INFO -- : Fetching HnItem #8648344
+I, [2014-11-23T09:39:26.122637 #29092]  INFO -- : enqueuing a fetch for parent Comment2276
+I, [2014-11-23T09:39:26.135831 #29093]  INFO -- : Fetching HnItem #8609644
+I, [2014-11-23T09:39:26.504458 #29093]  INFO -- : enqueuing a fetch for parent Comment2277
+I, [2014-11-23T09:39:26.517516 #29094]  INFO -- : Fetching HnItem #8648827
+I, [2014-11-23T09:39:26.900389 #29095]  INFO -- : Fetching HnItem #8648820
+I, [2014-11-23T09:39:27.252085 #29095]  INFO -- : enqueuing a fetch for parent Comment2278
+I, [2014-11-23T09:39:27.264589 #29096]  INFO -- : Fetching HnItem #8647388
+I, [2014-11-23T09:39:29.262081 #29096]  INFO -- : enqueuing a fetch for parent Comment2279
+I, [2014-11-23T09:39:29.274861 #29097]  INFO -- : Fetching HnItem #8646959
+I, [2014-11-23T09:39:29.632556 #29097]  INFO -- : enqueuing a fetch for parent Comment2280
+I, [2014-11-23T09:39:29.645590 #29098]  INFO -- : Fetching HnItem #8643237
+I, [2014-11-23T09:39:30.025286 #29099]  INFO -- : Fetching HnItem #8633513
+I, [2014-11-23T09:39:31.447257 #29099]  INFO -- : enqueuing a fetch for parent Comment2281
+I, [2014-11-23T09:39:31.461516 #29100]  INFO -- : Fetching HnItem #8648688
+I, [2014-11-23T09:39:31.841295 #29101]  INFO -- : Fetching HnItem #8648862
+I, [2014-11-23T09:39:32.191392 #29101]  INFO -- : enqueuing a fetch for parent Comment2283
+I, [2014-11-23T09:39:32.204266 #29102]  INFO -- : Fetching HnItem #8648155
+I, [2014-11-23T09:39:32.559484 #29102]  INFO -- : enqueuing a fetch for parent Comment2284
+I, [2014-11-23T09:39:32.572385 #29103]  INFO -- : Fetching HnItem #8647776
+I, [2014-11-23T09:39:32.948590 #29103]  INFO -- : enqueuing a fetch for parent Comment2285
+I, [2014-11-23T09:39:32.962069 #29104]  INFO -- : Fetching HnItem #8648340
+I, [2014-11-23T09:39:33.344177 #29105]  INFO -- : Fetching HnItem #8609322
+I, [2014-11-23T09:39:33.722616 #29106]  INFO -- : Fetching HnItem #8648790
+I, [2014-11-23T09:39:34.067916 #29106]  INFO -- : enqueuing a fetch for parent Comment2286
+I, [2014-11-23T09:39:34.081120 #29107]  INFO -- : Fetching HnItem #8647369
+I, [2014-11-23T09:39:34.430898 #29107]  INFO -- : enqueuing a fetch for parent Comment2287
+I, [2014-11-23T09:39:34.443107 #29108]  INFO -- : Fetching HnItem #8646862
+I, [2014-11-23T09:39:34.825682 #29109]  INFO -- : Fetching HnItem #8633161
+I, [2014-11-23T09:39:35.212834 #29110]  INFO -- : Fetching HnItem #8648690
+I, [2014-11-23T09:39:35.597416 #29111]  INFO -- : Fetching HnItem #8646954
+I, [2014-11-23T09:39:35.962819 #29111]  INFO -- : enqueuing a fetch for parent Comment2289
+I, [2014-11-23T09:39:35.976338 #29112]  INFO -- : Fetching HnItem #8647621
+I, [2014-11-23T09:39:36.341107 #29112]  INFO -- : enqueuing a fetch for parent Comment2290
+I, [2014-11-23T09:39:36.354142 #29113]  INFO -- : Fetching HnItem #8648769
+I, [2014-11-23T09:39:36.727070 #29113]  INFO -- : enqueuing a fetch for parent Comment2291
+I, [2014-11-23T09:39:36.740669 #29114]  INFO -- : Fetching HnItem #8647259
+I, [2014-11-23T09:39:38.211771 #29115]  INFO -- : Fetching HnItem #8646787
+I, [2014-11-23T09:39:38.602280 #29116]  INFO -- : Fetching HnItem #8647541
+I, [2014-11-23T09:39:38.973030 #29116]  INFO -- : enqueuing a fetch for parent Comment2293
+I, [2014-11-23T09:39:38.986087 #29117]  INFO -- : Fetching HnItem #8648723
+I, [2014-11-23T09:39:39.346567 #29117]  INFO -- : enqueuing a fetch for parent Comment2294
+I, [2014-11-23T09:39:39.359830 #29118]  INFO -- : Fetching HnItem #8647300
+I, [2014-11-23T09:39:40.326382 #29118]  INFO -- : enqueuing a fetch for parent Comment2295
+I, [2014-11-23T09:39:40.340800 #29119]  INFO -- : Fetching HnItem #8648597
+I, [2014-11-23T09:39:40.742190 #29120]  INFO -- : Fetching HnItem #8647226
+I, [2014-11-23T09:39:41.104280 #29120]  INFO -- : enqueuing a fetch for parent Comment2297
+I, [2014-11-23T09:39:41.117122 #29121]  INFO -- : Fetching HnItem #8647127
