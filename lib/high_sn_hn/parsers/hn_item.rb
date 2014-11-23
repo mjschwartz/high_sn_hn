@@ -1,41 +1,40 @@
 module HighSnHn
 
+  # error for when the API return a null body
+  class NullItemResult < RuntimeError; end
+
   class HnItem
+    include HTTParty
+    base_uri 'https://hacker-news.firebaseio.com'
+    format :json
 
-    def initialize(elements)
-      @title_line = elements[:title_line]
-      @meta_line  = elements[:meta_line]
+    attr_reader :data
+
+    def initialize(id)
+      @id = id
     end
 
-    def title
-      @title_line.css('a').text
+    def complete?
+      item = HighSnHn::Story.where(hn_id: @id).first
+      item = HighSnHn::Comment.where(hn_id: @id).first if item.nil?
+      @data = item.attributes if item
+      item && item.complete?
     end
 
-    def link
-      @title_line.xpath('a/@href').text
+    def fetch
+      @data = get(@id)
     end
 
-    def score
-      @meta_line.css('span').first.text.gsub(' points', '')
-    end
+    def get(id)
+      response  = self.class.get("/v0/item/#{id}.json",
+        options: {headers: {'Content-Type' => 'application/json'} })
 
-    def hn_id
-      @meta_line.css('a').last.xpath('@href').text.gsub('item?id=', '')
-    end
-
-    def user
-      @meta_line.css('a').first.text
-    end
-
-    def comment_count
-      comment_section = @meta_line.css('a').last.text
-      if comment_section == 'discuss'
-        '0'
-      else
-        comment_section.gsub(' comments', '')
+      unless response.parsed_response
+        raise(NullItemResult, "The API get for item #{id} was null.")
       end
+
+      response.parsed_response
     end
 
   end
-
 end

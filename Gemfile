@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'nokogiri'
-gem 'activerecord', '~> 4.0.0'
-gem 'twitter', '~> 5.6.0'
+gem 'activerecord', '~> 4.1.6'
+gem 'fakeweb', '~> 1.3'
+gem 'factory_girl', '~> 4.3.0'
+gem 'httparty'
 gem 'mysql2'
+gem 'nokogiri'
+gem 'redis'
+gem 'resque'
+gem 'rest-firebase'
 gem 'rspec'
-gem "fakeweb", "~> 1.3"
-gem "factory_girl", "~> 4.3.0"
+gem 'twitter', '~> 5.6.0'
+gem 'whenever', :require => false

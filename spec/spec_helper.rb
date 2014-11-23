@@ -3,8 +3,11 @@ Bundler.setup
 
 require "fakeweb"
 FakeWeb.allow_net_connect = false
-html = File.read(File.join(__dir__, 'support/test.html'))
-FakeWeb.register_uri(:get, "https://news.ycombinator.com/", :body => html)
+top = File.read(File.join(__dir__, 'support/top.json'))
+FakeWeb.register_uri(:get, 'https://hacker-news.firebaseio.com/v0/topstories.json',
+  body: top,
+  content_type: 'application/json; charset=utf-8')
+
 
 ENV["HIGHSNHN_ENV"] = "test"
 

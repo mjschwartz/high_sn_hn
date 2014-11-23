@@ -2,32 +2,28 @@
 module HighSnHn
 
   class HnPage
+
+    include HTTParty
+    base_uri 'https://hacker-news.firebaseio.com'
+    format :json
     attr_reader :doc
 
     def initialize
-      @doc = fetch_homepage
+      @top = top_100
     end
 
-    def fetch_homepage
-      html = open("https://news.ycombinator.com/")
-      @doc = Nokogiri::HTML(html.read)
-      @doc.encoding = 'utf-8'
-
-      @doc
-    end
-
-    def links
-      @doc.css("td.subtext").collect do |l|
-        HighSnHn::HnAbstractItem.new({
-          title_line: l.parent.xpath("preceding-sibling::*[1]").css("td.title").last,
-          meta_line: l
-        })
-      end
+    def self.top_100
+      get('/v0/topstories.json',
+        options: {headers: {'Content-Type' => 'application/json' } })
+      .parsed_response
     end
 
     def process
-      links.each do |link|
-        if HighSnHn::Submission.where(hn_submission_id: link.hn_id).exists?
+      HighSnHn::HnPage.top_100[0..24].each do |id|
+        page = HighSnHn::HnPage.item(id)
+
+
+        if HighSnHn::Submission.where(hn_submission_id: link).exists?
           sub = HighSnHn::Submission.where(hn_submission_id: link.hn_id).first
         else
           sub = HighSnHn::Submission.create({

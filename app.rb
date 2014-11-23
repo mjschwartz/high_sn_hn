@@ -5,6 +5,7 @@ require 'mysql2'
 require 'nokogiri'
 require 'open-uri'
 require 'twitter'
+require 'httparty'
 
 db_environment = ENV["HIGHSNHN_ENV"] || "development"
 

@@ -1,23 +1,30 @@
-require "bundler"
+require 'bundler'
 Bundler.setup
+require 'resque/tasks'
 
-desc "Setup the database."
+desc 'Setup the database.'
 task :db_setup do
-  require "./app"
+  require './app'
   HighSnHn::Setup.db
 end
 
-desc "Get the HN homepage"
+desc 'Get the HN homepage'
 task :process_homepage do
-  require "./app"
+  require './app'
   HighSnHn::HnPage.new.process
 end
 
-desc "Tweet out items"
+desc 'Tweet out items'
 task :tweet_items do
-  require "./app"
+  require './app'
   HighSnHn::ProcessSubmissions.new.post
 end
 
 desc 'Run both the process and the tweet steps'
 task :cron => [:process_homepage, :tweet_items]
+
+
+desc 'Load envt for Resque'
+task 'resque:setup' do
+  require './app'
+end
