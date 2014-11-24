@@ -33,7 +33,7 @@ end
 desc 'Find the current high id'
 task :fill_story_ids do
   require './app'
-  HighSnHn::Comment.where(story_id: nil).map {|x| x.send(:fill_in_story)}
+  #HighSnHn::Comment.where(story_id: nil).map {|x| x.send(:fill_in_story)}
 end
 
 

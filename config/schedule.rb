@@ -13,7 +13,7 @@ every '*/5 * * * *' do
   #rake "fill_story_ids"
 end
 
-every :hour do
-  command "cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake fill_story_ids"
-  #rake "fill_story_ids"
-end
+# every :hour do
+#   command "cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake fill_story_ids"
+#   #rake "fill_story_ids"
+# end
