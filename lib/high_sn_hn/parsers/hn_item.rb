@@ -8,10 +8,11 @@ module HighSnHn
     base_uri 'https://hacker-news.firebaseio.com'
     format :json
 
-    attr_reader :data
+    attr_reader :data, :model
 
     def initialize(id)
       @id = id
+      @model = false
     end
 
     def complete?
@@ -22,7 +23,22 @@ module HighSnHn
     end
 
     def fetch
+      LOGGER.info("Fetching HnItem ##{@id}")
       @data = get(@id)
+      setup_model()
+    end
+
+    def setup_model
+      if @data['type'] == 'story'
+        klass = HighSnHn::Story
+      elsif @data['type'] == 'comment'
+        klass = HighSnHn::Comment
+      end
+
+      if klass
+        @model = klass.where(hn_id: @id).first_or_create
+        @model.update(@data)
+      end
     end
 
     def get(id)

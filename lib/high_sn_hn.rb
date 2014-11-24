@@ -5,6 +5,7 @@ require_relative "./high_sn_hn/parsers/hn_abstract_item"
 require_relative "./high_sn_hn/parsers/hn_item"
 require_relative "./high_sn_hn/parsers/hn_ask_item"
 require_relative "./high_sn_hn/parsers/hn_job_item"
+require_relative "./high_sn_hn/parsers/hn_top_stories"
 require_relative "./high_sn_hn/parsers/high_id"
 require_relative "./high_sn_hn/models/comment"
 require_relative "./high_sn_hn/models/posting"
@@ -17,6 +18,7 @@ require_relative "./high_sn_hn/services/process_submissions"
 require_relative "./high_sn_hn/services/tweet_submission"
 require_relative "./high_sn_hn/workers/high_id_worker"
 require_relative "./high_sn_hn/workers/items_worker"
+require_relative "./high_sn_hn/workers/top_story_worker"
 
 require 'logger'
 PWD = File.dirname(File.expand_path(__FILE__))

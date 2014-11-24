@@ -31,9 +31,9 @@ task :find_high_id do
 end
 
 desc 'Find the current high id'
-task :fill_story_ids do
+task :top_stories do
   require './app'
-  #HighSnHn::Comment.where(story_id: nil).map {|x| x.send(:fill_in_story)}
+  Resque.enqueue(HighSnHn::TopStoryWorker)
 end
 
 

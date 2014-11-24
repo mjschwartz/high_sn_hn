@@ -14,7 +14,11 @@ module HighSnHn
         created_at: Time.at(data['time'])
       })
 
-      HighSnHn::Snapshot.create({story_id: id, score: data['score']})
+      HighSnHn::Snapshot.create({
+        story_id: id,
+        score: data['score'],
+        comment_count: comments.count
+      })
     end
 
     def complete?
