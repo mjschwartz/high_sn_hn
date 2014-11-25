@@ -19,7 +19,7 @@ module HighSnHn
       item = HighSnHn::Story.where(hn_id: @id).first
       item = HighSnHn::Comment.where(hn_id: @id).first if item.nil?
       @data = item.attributes if item
-      item && item.complete?
+      item && (item.complete? || item.dead)
     end
 
     def fetch

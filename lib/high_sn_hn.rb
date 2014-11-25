@@ -1,12 +1,9 @@
 # encoding: UTF-8
 require_relative "./high_sn_hn/setup"
-require_relative "./high_sn_hn/parsers/hn_page"
-require_relative "./high_sn_hn/parsers/hn_abstract_item"
 require_relative "./high_sn_hn/parsers/hn_item"
-require_relative "./high_sn_hn/parsers/hn_ask_item"
 require_relative "./high_sn_hn/parsers/hn_job_item"
 require_relative "./high_sn_hn/parsers/hn_top_stories"
-require_relative "./high_sn_hn/parsers/high_id"
+require_relative "./high_sn_hn/parsers/hn_high_id"
 require_relative "./high_sn_hn/models/comment"
 require_relative "./high_sn_hn/models/posting"
 require_relative "./high_sn_hn/models/story"

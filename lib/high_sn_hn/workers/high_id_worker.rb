@@ -5,7 +5,7 @@ module HighSnHn
 
     def self.perform
       LOGGER.info("Fetching current high id")
-      high_id = HighSnHn::HighId.new.id
+      high_id = HighSnHn::HnHighId.new.id
       previous = false
       redis = Redis.new
       LOGGER.info("High id now #{high_id}")

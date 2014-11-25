@@ -4,13 +4,40 @@ module HighSnHn
     after_save :spread_id_to_children
 
     has_many :comments
+    has_many :snapshots
+    has_many :postings
+
+    scope :postable, -> do
+      includes(:postings)
+        .where(postings: { story_id: nil } )
+        .includes(:snapshots)
+        .where(dead: false)
+        .where.not(snapshots: { id: nil } )
+        .where(created_at: (Time.now - 2.days)..Time.now)
+    end
+
+    def score
+      @_score ||= snapshots.blank? ? 0 : snapshots.order("created_at DESC").first.score
+    end
+
+    def comment_count
+      @_comment_count ||= snapshots.blank? ? 0 : snapshots.order("created_at DESC").first.comment_count
+    end
+
+    def s_to_n
+      return 0 if comment_count == 0
+      score.to_f / comment_count.to_f
+    end
 
     def update(data)
+      return false if data.blank?
+
       update_attributes({
         hn_id:   data['id'],
         author:  data['by'],
         title:   data['title'],
         url:     url_for(data),
+        dead:    false,
         created_at: Time.at(data['time'])
       })
 
@@ -24,7 +51,6 @@ module HighSnHn
     def complete?
       !!author && !!title && !!url
     end
-
 
     private
 

@@ -1,6 +1,6 @@
 module HighSnHn
 
-  class HighId
+  class HnHighId
     include HTTParty
     base_uri 'https://hacker-news.firebaseio.com'
     format :json

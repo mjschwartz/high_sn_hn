@@ -16,17 +16,6 @@ module HighSnHn
             item.fetch
           end
 
-
-          # if item.data['type'] == 'story'
-          #   klass = HighSnHn::Story
-          # elsif item.data['type'] == 'comment'
-          #   klass = HighSnHn::Comment
-          # end
-
-          # if klass
-          #   model = klass.where(hn_id: id).first_or_create
-          #   model.update(item.data)
-          # end
         rescue NullItemResult => e
           # there was no HTTP result - requeue
           LOGGER.error("#{e}")

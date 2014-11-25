@@ -10,15 +10,18 @@ set :output, '/home/deploy/high_sn_hn/log/cron.log'
 
 every '*/5 * * * *' do
   command "cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake find_high_id"
-  #rake "fill_story_ids"
 end
 
-every '*/20 * * * *' do
+every '*/15 * * * *' do
   command "cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake top_stories"
-  #rake "fill_story_ids"
+end
+
+every '*/30 * * * *' do
+  command "cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake tweet_items"
 end
 
 # every :hour do
 #   command "cd /home/deploy/high_sn_hn && HIGHSNHN_ENV=production bundle exec rake fill_story_ids"
-#   #rake "fill_story_ids"
-# end
+# # end
+
+

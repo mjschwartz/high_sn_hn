@@ -6,10 +6,13 @@ module HighSnHn
     after_save :get_or_share_story_id
 
     def update(data)
+      return false if data.blank?
       update_attributes({
         hn_id:   data['id'],
+        body:    data['text'],
         parent:  data['parent'],
         author:  data['by'],
+        dead:    false,
         created_at: Time.at(data['time'])
       })
     end
@@ -27,6 +30,10 @@ module HighSnHn
       LOGGER.info("enqueuing a fetch for parent Comment#{id}")
       Resque.enqueue(HighSnHn::ItemsWorker, parent, parent)
       return nil
+    end
+
+    def dead?
+      !!dead
     end
 
     def complete?
