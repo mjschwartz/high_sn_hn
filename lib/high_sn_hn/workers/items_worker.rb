@@ -19,7 +19,18 @@ module HighSnHn
         rescue NullItemResult => e
           # there was no HTTP result - requeue
           LOGGER.error("#{e}")
-          Resque.enqueue(HighSnHn::ItemsWorker, id, id)
+          redis = Redis.new
+          count = redis.hmget 'failed_get', id
+          if count && count.length
+            count = count.first.to_i
+            if count < 5
+              redis.hmset 'failed_get', id, count + 1
+              Resque.enqueue(HighSnHn::ItemsWorker, id, id)
+            end
+          else
+            redis.hmset 'failed_get', id, 1
+            Resque.enqueue(HighSnHn::ItemsWorker, id, id)
+          end
         end
       end
     rescue Exception => e
