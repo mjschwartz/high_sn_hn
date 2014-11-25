@@ -43,7 +43,7 @@ module HighSnHn
 
       HighSnHn::Snapshot.create({
         story_id: id,
-        score: data['score'],
+        score: score_for(data),
         comment_count: comments.count
       })
     end
@@ -63,6 +63,10 @@ module HighSnHn
 
     def url_for(data)
       data['url'].blank? ? "https://news.ycombinator.com/item?id=#{data['id']}" : data['url']
+    end
+
+    def score_for(data)
+      data['score'].blank? ? 0 : data['score']
     end
   end
 end
