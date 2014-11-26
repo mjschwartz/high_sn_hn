@@ -1,7 +1,8 @@
 .rspec
 /.bundle
 .DS_Store
+dump.rdb
+Gemfile.lock
 config/app_secret.yml
 config/database.yml
-dump.rdb
 log/
