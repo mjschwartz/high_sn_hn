@@ -8,21 +8,11 @@ task :db_setup do
   HighSnHn::Setup.db
 end
 
-desc 'Get the HN homepage'
-task :process_homepage do
-  require './app'
-  HighSnHn::HnPage.new.process
-end
-
 desc 'Tweet out items'
 task :tweet_items do
   require './app'
   HighSnHn::ProcessSubmissions.new.post
 end
-
-desc 'Run both the process and the tweet steps'
-task :cron => [:process_homepage, :tweet_items]
-
 
 desc 'Find the current high id'
 task :find_high_id do
@@ -30,12 +20,11 @@ task :find_high_id do
   Resque.enqueue(HighSnHn::HighIdWorker)
 end
 
-desc 'Find the current high id'
+desc 'Parse the current Top 100 stories list'
 task :top_stories do
   require './app'
   Resque.enqueue(HighSnHn::TopStoryWorker)
 end
-
 
 desc 'Load envt for Resque'
 task 'resque:setup' do
