@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'activerecord', '~> 4.1'
 gem 'fakeweb', '~> 1.3'
-gem 'factory_girl', '~> 4.3.0'
+gem 'factory_girl'
 gem 'httparty'
 gem 'mysql2'
 gem 'nokogiri'
