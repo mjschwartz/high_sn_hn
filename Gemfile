@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'activerecord', '~> 4.1.6'
+gem 'activerecord', '~> 4.1'
 gem 'fakeweb', '~> 1.3'
 gem 'factory_girl', '~> 4.3.0'
 gem 'httparty'
