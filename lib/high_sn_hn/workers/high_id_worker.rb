@@ -8,7 +8,7 @@ module HighSnHn
       high_id = HighSnHn::HnHighId.new.id
       previous = false
       redis = Redis.new
-      LOGGER.info("High id now #{high_id}")
+      #LOGGER.info("High id now #{high_id}")
 
       redis.multi do
         previous = redis.get('highest_id')

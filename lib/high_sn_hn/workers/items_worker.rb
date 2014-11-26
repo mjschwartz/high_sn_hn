@@ -13,6 +13,7 @@ module HighSnHn
           if item.complete?
             return true
           else
+            #LOGGER.info("Fetching HnItem ##{id}")
             item.fetch
           end
 

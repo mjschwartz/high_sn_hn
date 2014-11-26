@@ -23,7 +23,6 @@ module HighSnHn
     end
 
     def fetch
-      LOGGER.info("Fetching HnItem ##{@id}")
       @data = get(@id)
       setup_model()
     end

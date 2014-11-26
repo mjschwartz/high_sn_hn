@@ -10,13 +10,4 @@ FactoryGirl.define do
     submission
   end
 
-  factory :submission, class: HighSnHn::Submission do
-    hn_submission_id 2604013
-    title "A cool title"
-    link "http//sosmart.tumblr.com/"
-    submitting_user "foobar"
-    tweeted 0
-    created_at (Time.now - 1.hour)
-  end
-
 end
