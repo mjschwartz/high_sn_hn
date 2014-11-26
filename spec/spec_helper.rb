@@ -22,7 +22,8 @@ RSpec.configure do |config|
 #   end
   config.after(:all) do
     # Destroy fixtures
-    HighSnHn::Submission.delete_all
+    HighSnHn::Story.delete_all
+    HighSnHn::Comment.delete_all
     HighSnHn::Posting.delete_all
     HighSnHn::Snapshot.delete_all
   end
