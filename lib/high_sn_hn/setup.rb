@@ -1,18 +1,21 @@
 module HighSnHn
   class Setup
 
+    def self.tables
+      ["snapshots", "postings", "stories", "comments"]
+    end
+
     def self.db
       ActiveRecord::Base.connection.instance_eval do
 
         puts "Creating snapshots table..."
         create_table "snapshots", :force => true do |t|
           t.integer   "story_id"
-          t.integer   "score"
-          t.integer   "comment_count", :default => 0
+          t.integer   "score", default: 0
+          t.integer   "comment_count", default: 0
           t.datetime  "created_at"
           t.datetime  "updated_at"
         end
-
         add_index "snapshots", ["story_id"], :name => "index_snapshots_on_hn_story_id"
 
         puts "Creating postings table..."
@@ -23,7 +26,6 @@ module HighSnHn
           t.datetime  "created_at"
           t.datetime  "updated_at"
         end
-
         add_index "postings", ["story_id"], :name => "index_postings_on_hn_story_id"
 
         puts "Creating stories table..."
@@ -31,11 +33,11 @@ module HighSnHn
           t.integer   "hn_id"
           t.string    "author"
           t.string    "title"
-          t.string    "url", :limit => 1000
+          t.boolean   "dead", default: 0
+          t.string    "url", limit: 1000
           t.datetime  "created_at"
           t.datetime  "updated_at"
         end
-
         add_index "stories", ["hn_id"], :name => "index_stories_on_hn_id"
 
         puts "Creating comments table..."
@@ -44,34 +46,29 @@ module HighSnHn
           t.integer   "parent"
           t.integer   "hn_id"
           t.string    "author"
+          t.text      "body"
+          t.boolean   "dead", default: 0
           t.datetime  "created_at"
           t.datetime  "updated_at"
         end
-
         add_index "comments", ["story_id"], :name => "index_comments_on_story_id"
+        add_index "comments", ["hn_id"], :name => "index_comments_on_hn_id"
 
         ActiveRecord::Base.connection.execute("SET collation_connection = 'utf8_general_ci';")
         ActiveRecord::Base.connection.execute("ALTER DATABASE #{ActiveRecord::Base.connection_config[:database]} CHARACTER SET utf8 COLLATE utf8_general_ci;")
-        ActiveRecord::Base.connection.execute("ALTER TABLE snapshots CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
-        ActiveRecord::Base.connection.execute("ALTER TABLE postings CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
-        ActiveRecord::Base.connection.execute("ALTER TABLE comments CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
-        ActiveRecord::Base.connection.execute("ALTER TABLE stories CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;")
+        self.tables.each do |t|
+          sql = "ALTER TABLE #{t} CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;"
+          ActiveRecord::Base.connection.execute(sql)
+        end
         puts "done."
       end
     end
 
     def self.test_db
-      if ActiveRecord::Base.connection.table_exists? "snapshots"
-        ActiveRecord::Base.connection.drop_table "snapshots"
-      end
-      if ActiveRecord::Base.connection.table_exists? "postings"
-        ActiveRecord::Base.connection.drop_table "postings"
-      end
-      if ActiveRecord::Base.connection.table_exists? "stories"
-        ActiveRecord::Base.connection.drop_table "stories"
-      end
-      if ActiveRecord::Base.connection.table_exists? "comments"
-        ActiveRecord::Base.connection.drop_table "comments"
+      self.tables.each do |t|
+        if ActiveRecord::Base.connection.table_exists?(t)
+          ActiveRecord::Base.connection.drop_table(t)
+        end
       end
 
       self.db
