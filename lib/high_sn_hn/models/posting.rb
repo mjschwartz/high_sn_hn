@@ -1,8 +1,6 @@
 module HighSnHn
-
   class Posting < ActiveRecord::Base
-    belongs_to :submission
+    belongs_to :story
 
   end
-
 end

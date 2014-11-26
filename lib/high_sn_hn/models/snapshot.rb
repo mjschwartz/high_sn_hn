@@ -1,8 +1,6 @@
 module HighSnHn
-
   class Snapshot < ActiveRecord::Base
-    belongs_to :submission
+    belongs_to :story
 
   end
-
 end
