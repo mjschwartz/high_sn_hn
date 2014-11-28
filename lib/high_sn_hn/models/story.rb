@@ -41,6 +41,18 @@ module HighSnHn
       })
     end
 
+    def data_attributes
+      {
+        type:       'story',
+        hn_id:      hn_id,
+        author:     author,
+        title:      title,
+        url:        url,
+        created_at: created_at,
+        score:      score
+      }
+    end
+
     def complete?
       !!author && !!title && !!url
     end

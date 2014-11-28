@@ -7,12 +7,11 @@ module HighSnHn
       LOGGER.info("Fetching current high id")
       high_id = HighSnHn::HnHighId.new.id
       previous = false
-      redis = Redis.new
       #LOGGER.info("High id now #{high_id}")
 
-      redis.multi do
-        previous = redis.get('highest_id')
-        redis.set('highest_id', high_id + 1)
+      REDIS.multi do
+        previous = REDIS.get('highest_id')
+        REDIS.set('highest_id', high_id + 1)
       end
 
       Resque.enqueue(HighSnHn::ItemsWorker, previous.value.to_i, high_id) if previous

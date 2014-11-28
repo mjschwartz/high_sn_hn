@@ -2,8 +2,7 @@ module HighSnHn
 
   class TweetSubmission
 
-    def initialize(story, skip_sleep=false)
-      @skip_sleep = skip_sleep || false # gross way to make specs less annoying
+    def initialize(story)
       @story = story
       api_info = HighSnHn::Keys.twitter
       # @client = Twitter::REST::Client.new do |config|
@@ -26,14 +25,14 @@ module HighSnHn
     # at most 2 per cron job, so just playing it safe.
     def post
       article_link = HighSnHn::GenerateShortlink.new(@story.url).shorten
-      sleep(2) unless @skip_sleep
+      sleep(2) unless ENV['HIGHSNHN_ENV'] == 'test'
 
       comments_url = "https://news.ycombinator.com/item?id=#{@story.hn_id}"
       comments_link = HighSnHn::GenerateShortlink.new(comments_url).shorten
-      sleep(2) unless @skip_sleep
+      sleep(2) unless ENV['HIGHSNHN_ENV'] == 'test'
 
-      twitter_text = @story.title + ": " + article_link + " ( " + comments_link + " )"
-      LOGGER.info("\ntweeting #{@story.id}: #{twitter_text}\n")
+      twitter_text = "#{@story.title}: #{article_link} ( #{comments_link} )"
+      #LOGGER.info("\ntweeting #{@story.id}: #{twitter_text}\n")
       #@client.update(twitter_text)
 
       record_posting(article_link, comments_link)

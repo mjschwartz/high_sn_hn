@@ -29,6 +29,17 @@ module HighSnHn
       !!author && !!parent
     end
 
+    def data_attributes
+      {
+        type:       'comment',
+        hn_id:      hn_id,
+        body:       body,
+        parent:     parent,
+        author:     author,
+        created_at: created_at
+      }
+    end
+
     private
 
     def get_or_share_story_id

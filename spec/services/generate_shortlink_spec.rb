@@ -15,7 +15,7 @@ describe HighSnHn::GenerateShortlink do
 
   describe "shorten" do
     it "should return the 'id' param of a request to Google's URL shortner" do
-      expect(HighSnHn::GenerateShortlink.new('foo').shorten).to eq("http://googly.com/foo")\
+      expect(HighSnHn::GenerateShortlink.new('foo').shorten).to eq("http://googly.com/foo")
     end
   end
 

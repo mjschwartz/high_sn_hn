@@ -7,11 +7,11 @@ require 'open-uri'
 require 'twitter'
 require 'httparty'
 
-db_environment = ENV["HIGHSNHN_ENV"] || "development"
+db_environment = ENV['HIGHSNHN_ENV'] || 'development'
 
 db_config = YAML.load_file(File.join(__dir__, 'config/database.yml'))
 ActiveRecord::Base.establish_connection(db_config[db_environment])
 
 
 
-require "./lib/high_sn_hn"
+require './lib/high_sn_hn'

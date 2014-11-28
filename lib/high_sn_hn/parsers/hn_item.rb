@@ -20,12 +20,12 @@ module HighSnHn
       # will look and see if we have a comment or story matching
       item = HighSnHn::Story.where(hn_id: @id).first
       item = HighSnHn::Comment.where(hn_id: @id).first if item.nil?
-      @data = item.attributes if item
-      item && (item.complete? || item.dead)
+      @data = item.data_attributes if item
+      item && item.complete?
     end
 
     def fetch
-      @data = get(@id)
+      @data = HighSnHn::HnResponse.new(get(@id))
       if klass = @data.klass
         @model = klass.where(hn_id: @id).first_or_initialize
         @model.update(@data)

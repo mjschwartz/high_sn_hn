@@ -1,9 +1,9 @@
-require "bundler"
+require 'bundler'
 Bundler.setup
-require "fakeweb"
+require 'fakeweb'
 
-ENV["HIGHSNHN_ENV"] = "test"
-require_relative "../app"
+ENV['HIGHSNHN_ENV'] = 'test'
+require_relative '../app'
 require_relative './factories'
 
 FakeWeb.allow_net_connect = false
@@ -32,5 +32,5 @@ RSpec.configure do |config|
   end
   config.mock_with :rspec
   config.include FactoryGirl::Syntax::Methods
-  config.order = "random"
+  config.order = 'random'
 end

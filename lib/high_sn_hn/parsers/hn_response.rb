@@ -44,9 +44,9 @@ module HighSnHn
 
     def klass
       if @data['type'] == 'story'
-        klass = HighSnHn::Story
+        HighSnHn::Story
       elsif @data['type'] == 'comment'
-        klass = HighSnHn::Comment
+        HighSnHn::Comment
       end
     end
 
@@ -55,6 +55,8 @@ module HighSnHn
         story_attributes
       elsif klass == HighSnHn::Comment
         comment_attributes
+      else
+        {}
       end
     end
 
