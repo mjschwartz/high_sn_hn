@@ -42,6 +42,24 @@ module HighSnHn
       end
     end
 
+    def klass
+      if @data['type'] == 'story'
+        klass = HighSnHn::Story
+      elsif @data['type'] == 'comment'
+        klass = HighSnHn::Comment
+      end
+    end
+
+    def attributes
+      if klass == HighSnHn::Story
+        story_attributes
+      elsif klass == HighSnHn::Comment
+        comment_attributes
+      end
+    end
+
+    private
+
     def story_attributes
       {
         hn_id:      hn_id,

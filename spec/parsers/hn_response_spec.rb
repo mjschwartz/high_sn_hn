@@ -13,7 +13,7 @@ describe HighSnHn::HnResponse do
         author:     COMMENT_JSON['by'],
         created_at: Time.at(COMMENT_JSON['time'])
       }
-      expect(comment.comment_attributes).to eq(attribs)
+      expect(comment.attributes).to eq(attribs)
     end
 
     it "should handle a malformed Time" do
@@ -24,6 +24,11 @@ describe HighSnHn::HnResponse do
     it "should return a DateTime when time is malformed" do
       comment = HighSnHn::HnResponse.new({'time' => ''})
       expect(comment.created_at.class.name).to eq('DateTime')
+    end
+
+    it "should return the proper class" do
+      comment = HighSnHn::HnResponse.new({'type' => COMMENT_JSON['type']})
+      expect(comment.klass).to eq(HighSnHn::Comment)
     end
   end # describe "parsing a comment" do
 
@@ -38,7 +43,7 @@ describe HighSnHn::HnResponse do
         url:        STORY_JSON['url'],
         created_at: Time.at(STORY_JSON['time'])
       }
-      expect(story.story_attributes).to eq(attribs)
+      expect(story.attributes).to eq(attribs)
     end
 
     it "should parse the proper score" do
@@ -57,6 +62,11 @@ describe HighSnHn::HnResponse do
     it "should return 0 for a blank score" do
       story = HighSnHn::HnResponse.new({'score' => ''})
       expect(story.score).to eq(0)
+    end
+
+    it "should return the proper class" do
+      story = HighSnHn::HnResponse.new({'type' => STORY_JSON['type']})
+      expect(story.klass).to eq(HighSnHn::Story)
     end
   end # describe "parsing a story" do
 end

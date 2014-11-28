@@ -16,6 +16,8 @@ module HighSnHn
     end
 
     def complete?
+      # we haven't fetched so we don't know which type of item this is
+      # will look and see if we have a comment or story matching
       item = HighSnHn::Story.where(hn_id: @id).first
       item = HighSnHn::Comment.where(hn_id: @id).first if item.nil?
       @data = item.attributes if item
@@ -24,18 +26,8 @@ module HighSnHn
 
     def fetch
       @data = get(@id)
-      setup_model()
-    end
-
-    def setup_model
-      if @data['type'] == 'story'
-        klass = HighSnHn::Story
-      elsif @data['type'] == 'comment'
-        klass = HighSnHn::Comment
-      end
-
-      if klass
-        @model = klass.where(hn_id: @id).first_or_create
+      if klass = @data.klass
+        @model = klass.where(hn_id: @id).first_or_initialize
         @model.update(@data)
       end
     end

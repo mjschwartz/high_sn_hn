@@ -7,7 +7,6 @@ module HighSnHn
       return unless min_item.to_i > 0 && max_item.to_i > 0
       (min_item..max_item).each do |id|
         begin
-          klass = false
           item = HighSnHn::HnItem.new(id)
 
           if item.complete?
@@ -18,20 +17,9 @@ module HighSnHn
           end
 
         rescue NullItemResult => e
-          # there was no HTTP result - requeue
+          # there was no HTTP result for the item fetch - requeue
           LOGGER.error("#{e}")
-          redis = Redis.new
-          count = redis.hmget 'failed_get', id
-          if count && count.length
-            count = count.first.to_i
-            if count < 5
-              redis.hmset 'failed_get', id, count + 1
-              Resque.enqueue(HighSnHn::ItemsWorker, id, id)
-            end
-          else
-            redis.hmset 'failed_get', id, 1
-            Resque.enqueue(HighSnHn::ItemsWorker, id, id)
-          end
+          HighSnHn::ReEnqueueItem.new(id)
         end
       end
     rescue Exception => e

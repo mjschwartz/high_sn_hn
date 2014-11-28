@@ -7,14 +7,7 @@ module HighSnHn
 
     def update(data)
       return false if data.blank?
-      update_attributes({
-        hn_id:   data['id'],
-        body:    data['text'],
-        parent:  data['parent'],
-        author:  data['by'],
-        dead:    false,
-        created_at: Time.at(data['time'])
-      })
+      update_attributes(data.attributes)
     end
 
     def parent_story_id
@@ -27,13 +20,9 @@ module HighSnHn
       c = HighSnHn::Comment.where(hn_id: parent).first
       return c.parent_story_id if c
       # welp, we don't have it - have it fetched.
-      LOGGER.info("enqueuing a fetch for parent Comment#{id}")
+      # LOGGER.info("enqueuing a fetch for parent Comment#{id}")
       Resque.enqueue(HighSnHn::ItemsWorker, parent, parent)
       return nil
-    end
-
-    def dead?
-      !!dead
     end
 
     def complete?

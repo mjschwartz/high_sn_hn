@@ -32,18 +32,11 @@ module HighSnHn
     def update(data)
       return false if data.blank?
 
-      update_attributes({
-        hn_id:   data['id'],
-        author:  data['by'],
-        title:   data['title'],
-        url:     url_for(data),
-        dead:    false,
-        created_at: Time.at(data['time'])
-      })
+      update_attributes(data.attributes)
 
       HighSnHn::Snapshot.create({
-        story_id: id,
-        score: score_for(data),
+        story_id:      id,
+        score:         data.score,
         comment_count: comment_count
       })
     end
@@ -59,14 +52,6 @@ module HighSnHn
       HighSnHn::Comment.where(parent: hn_id)
         .where(story_id: nil)
         .each { |c| c.update_attribute(:story_id, self.id) }
-    end
-
-    def url_for(data)
-      data['url'].blank? ? "https://news.ycombinator.com/item?id=#{data['id']}" : data['url']
-    end
-
-    def score_for(data)
-      data['score'].blank? ? 0 : data['score']
     end
   end
 end
