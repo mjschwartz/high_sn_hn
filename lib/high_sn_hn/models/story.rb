@@ -21,7 +21,7 @@ module HighSnHn
     end
 
     def comment_count
-      @_comment_count ||= snapshots.blank? ? 0 : snapshots.order("created_at DESC").first.comment_count
+      @_comment_count ||= comments.count
     end
 
     def s_to_n
@@ -44,7 +44,7 @@ module HighSnHn
       HighSnHn::Snapshot.create({
         story_id: id,
         score: score_for(data),
-        comment_count: comments.count
+        comment_count: comment_count
       })
     end
 

@@ -1,5 +1,6 @@
 # encoding: UTF-8
 require_relative "./high_sn_hn/setup"
+require_relative "./high_sn_hn/parsers/hn_response"
 require_relative "./high_sn_hn/parsers/hn_high_id"
 require_relative "./high_sn_hn/parsers/hn_item"
 require_relative "./high_sn_hn/parsers/hn_top_stories"

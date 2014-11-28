@@ -1,18 +1,21 @@
 require "bundler"
 Bundler.setup
-
 require "fakeweb"
+
+ENV["HIGHSNHN_ENV"] = "test"
+require_relative "../app"
+require_relative './factories'
+
 FakeWeb.allow_net_connect = false
 top = File.read(File.join(__dir__, 'support/top.json'))
 FakeWeb.register_uri(:get, 'https://hacker-news.firebaseio.com/v0/topstories.json',
   body: top,
   content_type: 'application/json; charset=utf-8')
 
+COMMENT_JSON = JSON.parse(File.read(File.join(__dir__, 'support/comment.json')))
+STORY_JSON = JSON.parse(File.read(File.join(__dir__, 'support/story.json')))
 
-ENV["HIGHSNHN_ENV"] = "test"
 
-require_relative "../app"
-require_relative './factories'
 
 HighSnHn::Setup.test_db
 
