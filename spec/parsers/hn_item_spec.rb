@@ -11,8 +11,8 @@ describe HighSnHn::HnItem do
       d = build(:snapshot)
     end
 
-    describe "title" do
-      it "should return the page's title" do
+    describe 'complete?' do
+      it 'should return the page title' do
         expect(1).to eq(1)
       end
     end

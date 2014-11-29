@@ -12,6 +12,15 @@ FactoryGirl.define do
     created_at (Time.now - 1.day)
   end
 
+  factory :postable, class: HighSnHn::Story do
+    hn_id  '123456'
+    author 'JaneDoe'
+    title  'Crazy game of poker'
+    url    'http://foo.com/story'
+    dead   false
+    created_at (Time.now - 1.day)
+  end
+
   factory :comment, class: HighSnHn::Comment do
     story
     hn_id  '123457'
