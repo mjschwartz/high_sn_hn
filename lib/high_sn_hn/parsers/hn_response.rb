@@ -43,7 +43,7 @@ module HighSnHn
     end
 
     def klass
-      if @data['type'] == 'story'
+      if @data['type'] == 'story' || @data['type'] == 'poll'
         HighSnHn::Story
       elsif @data['type'] == 'comment'
         HighSnHn::Comment
