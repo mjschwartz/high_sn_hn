@@ -4,7 +4,7 @@ module HighSnHn
     @queue = :top_queue
 
     def self.perform
-      LOGGER.info("Fetching top stories")
+      #LOGGER.info("Fetching top stories")
       top = HighSnHn::HnTopStories.new
 
       unless top.stories.blank?

@@ -4,7 +4,7 @@ module HighSnHn
     @queue = :id_queue
 
     def self.perform
-      LOGGER.info("Fetching current high id")
+      #LOGGER.info("Fetching current high id")
       high_id = HighSnHn::HnHighId.new.id
       previous = false
       #LOGGER.info("High id now #{high_id}")

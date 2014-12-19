@@ -11,7 +11,7 @@ module HighSnHn
     end
 
     def parent_story_id
-      LOGGER.info("looking for parent id")
+      #LOGGER.info("looking for parent id")
       return story_id if story_id
       return nil unless parent
       # look for the story
@@ -21,7 +21,7 @@ module HighSnHn
       c = HighSnHn::Comment.where(hn_id: parent).first
         #LOGGER.info("found a parent: \nc.author.blank?: #{c.author.blank?}\nc.parent.blank?: #{c.parent.blank?}\nc: #{c}")
       if !c.blank? && c.author.blank? && c.parent.blank?
-        LOGGER.info("setting up a queue for #{parent}")
+        #LOGGER.info("setting up a queue for #{parent}")
         HighSnHn::ReEnqueueItem.new(parent)
       end
       return c.parent_story_id if c
