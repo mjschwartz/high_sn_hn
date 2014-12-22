@@ -23,7 +23,7 @@ module HighSnHn
     end
 
     def url
-      @data['url'].blank? ? "https://news.ycombinator.com/item?id=#{hn_id}" : @data['url']
+      @data['url'].blank? ? "https://news.ycombinator.com/item?id=#{hn_id}" : @data['url'][0..255]
     end
 
     def body
