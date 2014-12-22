@@ -34,6 +34,10 @@ module HighSnHn
       @data['parent']
     end
 
+    def dead
+      !!@data['deleted']
+    end
+
     def created_at
       begin
         Time.at(@data['time'])
@@ -68,6 +72,7 @@ module HighSnHn
         author:     author,
         title:      title,
         url:        url,
+        dead:       dead,
         created_at: created_at
       }
     end
@@ -78,6 +83,7 @@ module HighSnHn
         body:       body,
         parent:     parent,
         author:     author,
+        dead:       dead,
         created_at: created_at
       }
     end
