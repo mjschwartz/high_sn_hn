@@ -28,24 +28,68 @@ describe HighSnHn::Story do
       expect(postable.map { |x| x.id }).to eq([@story1.id])
     end
 
-
     it 'should select stories with snapshots, proper s/n and no postings' do
       create(:posting, story: @story1)
       postable = HighSnHn::Story.postable.to_a
       expect(postable.map { |x| x.id }).to eq([])
     end
-  end
+  end # describe 'postable' do
 
-  # describe 'update' do
+  describe 'update' do
 
-  #   before(:each) do
-  #     #allow(HighSnHn::Snapshot).to receive(:hmset).and_return(true)
-  #   end
+    before(:each) do
+      @story = build(:story)
+      @data = HighSnHn::HnResponse.new({
+        "by" => "JamesTKirk",
+        "id" => 976,
+        "score" => 212,
+        "time" =>  1.hour.ago.to_i,
+        "title" => "Green Ladies Like Kirk",
+        "type" => "story",
+        "url" => "https://foo.bar"
+      })
+    end
 
-  #   it 'should'
+    it 'should return the model when provided data' do
+      expect(@story.update(@data)).to eq(@story)
+    end
 
+    it 'should return false when data not provided' do
+      expect(@story.update({})).to eq(false)
+    end
 
+    it 'should update the attributes of a story' do
+      @story.update(@data)
 
-  # end
+      expect(@story.hn_id).to eq(@data.hn_id)
+      expect(@story.author).to eq(@data.author)
+      expect(@story.title).to eq(@data.title)
+      expect(@story.dead).to eq(@data.dead)
+      expect(@story.created_at).to eq(@data.created_at)
+    end
 
+    it 'should create a snapshot' do
+      snaps = HighSnHn::Snapshot.count
+      @story.update(@data)
+
+      expect(HighSnHn::Snapshot.count).to eq(snaps + 1)
+    end
+
+    it 'should create a Title if one does not exist' do
+      expect(HighSnHn::Title.where(body: @data.title).exists?).to eq(false)
+      @story.update(@data)
+
+      expect(HighSnHn::Title.where(body: @data.title).exists?).to eq(true)
+    end
+
+    it 'should re-use a Title if one does exist' do
+      create(:title, body: @data.title)
+      expect(HighSnHn::Title.where(body: @data.title).exists?).to eq(true)
+      titles = HighSnHn::Title.count
+      @story.update(@data)
+
+      expect(HighSnHn::Title.count).to eq(titles)
+    end
+
+  end # describe 'update' do
 end

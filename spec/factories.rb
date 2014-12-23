@@ -44,4 +44,8 @@ FactoryGirl.define do
     shortened_url 'http://goo.gl/b'
     association :story
   end
+
+  factory :title, class: HighSnHn::Title do
+    body 'A Title'
+  end
 end

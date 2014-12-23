@@ -40,6 +40,8 @@ module HighSnHn
         comment_count: comments.count,
         title:         HighSnHn::Title.where(body: data.title).first_or_create
       })
+
+      return self
     end
 
     def data_attributes
