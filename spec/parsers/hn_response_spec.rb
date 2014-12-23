@@ -11,6 +11,7 @@ describe HighSnHn::HnResponse do
         body:       COMMENT_JSON['text'],
         parent:     COMMENT_JSON['parent'],
         author:     COMMENT_JSON['by'],
+        dead:       !!COMMENT_JSON['deleted'],
         created_at: Time.at(COMMENT_JSON['time'])
       }
       expect(comment.attributes).to eq(attribs)
@@ -41,6 +42,7 @@ describe HighSnHn::HnResponse do
         author:     STORY_JSON['by'],
         title:      STORY_JSON['title'],
         url:        STORY_JSON['url'],
+        dead:       !!STORY_JSON['deleted'],
         created_at: Time.at(STORY_JSON['time'])
       }
       expect(story.attributes).to eq(attribs)

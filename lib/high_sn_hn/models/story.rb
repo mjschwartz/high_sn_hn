@@ -4,8 +4,8 @@ module HighSnHn
     after_save :spread_id_to_children
 
     has_many :comments
-    has_many :snapshots
-    has_many :postings
+    has_many :snapshots, dependent: :destroy
+    has_many :postings, dependent: :destroy
 
     scope :postable, -> do
       includes(:postings)
@@ -49,7 +49,8 @@ module HighSnHn
         title:      title,
         url:        url,
         created_at: created_at,
-        score:      score
+        score:      score,
+        dead:       dead
       }
     end
 

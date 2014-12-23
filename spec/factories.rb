@@ -10,15 +10,16 @@ FactoryGirl.define do
     url 'http://foo.com/story'
     dead false
     created_at (Time.now - 1.day)
-  end
 
-  factory :postable, class: HighSnHn::Story do
-    hn_id  '123456'
-    author 'JaneDoe'
-    title  'Crazy game of poker'
-    url    'http://foo.com/story'
-    dead   false
-    created_at (Time.now - 1.day)
+    factory :postable_story, class: HighSnHn::Story do
+      transient do
+        snapshots_count 1
+      end
+
+      after(:create) do |story, evaluator|
+        create_list(:snapshot, evaluator.snapshots_count, story: story, score: 200, comment_count: 10)
+      end
+    end
   end
 
   factory :comment, class: HighSnHn::Comment do

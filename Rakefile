@@ -44,15 +44,6 @@ task :stop_resque do
   end
 
   f.close
-
-  # pids = Resque.workers.map { |w| w.worker_pids }.flatten
-  # if pids.empty?
-  #   puts "No workers to kill"
-  # else
-  #   syscmd = "kill -s QUIT #{pids.join(' ')}"
-  #   puts "Running syscmd: #{syscmd}"
-  #   system(syscmd)
-  # end
 end
 
 desc 'Start a Resque worker'

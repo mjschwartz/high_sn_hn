@@ -42,7 +42,8 @@ module HighSnHn
         body:       body,
         parent:     parent,
         author:     author,
-        created_at: created_at
+        created_at: created_at,
+        dead:       dead
       }
     end
 
