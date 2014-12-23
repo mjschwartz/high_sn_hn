@@ -4,7 +4,7 @@ module HighSnHn
 
     def initialize
       @point_thresh = 150
-      @sn_thresh    = 2.25
+      @sn_thresh    = 2.00
       @tweet_limit  = 2
     end
 
