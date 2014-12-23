@@ -7,10 +7,11 @@ What: A Twitter bot that tweets HN submissions that are over 150 points and have
 
 Why: Passively monitor the most important items that come across HN while attempting to weed out some of the more pop-culture-y or flamebait-y submissions.
 
-This is the basic source code for the bot that gathers the stories from HN, persists the data, and tweets out the stories meeting our criteria.
+This is the basic source code for the bot that gathers HN data from [Firebase Hacker News API](https://github.com/HackerNews/API), persists the data, and tweets out the stories meeting our criteria.
 
 ### Requirements
 * Redis
+* Resque worker(s)
 * Cron
 
 ### Configuration
@@ -44,7 +45,3 @@ Launch a Resque worker in the background:
 ### Specs
 
     rspec
-
-### Gathering data
-
-    rake cron
