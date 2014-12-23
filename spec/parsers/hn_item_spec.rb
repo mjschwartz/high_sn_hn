@@ -2,91 +2,63 @@ require 'spec_helper'
 
 describe HighSnHn::HnItem do
 
-  describe "for a typical link" do
-    before(:each) do
-      # @item = HighSnHn::HnPage.new.links.first
-      a = build(:story)
-      b = build(:comment)
-      c = build(:posting)
-      d = build(:snapshot)
+  it 'should find an existing comment' do
+    comment = create(:comment, {hn_id: 12345})
+    expect(HighSnHn::HnItem.new(12345).model).to eq(comment)
+  end
+
+  it 'should set the proper .data when it finds a comment' do
+    comment = create(:comment, {hn_id: 12345})
+    expect(HighSnHn::HnItem.new(12345).data.except!(:created_at)).to eq(comment.data_attributes.except!(:created_at))
+  end
+
+  it 'should find an existing story' do
+    story = create(:story, {hn_id: 54321})
+    expect(HighSnHn::HnItem.new(54321).model).to eq(story)
+  end
+
+  it 'should set the proper .data when it finds a story' do
+    story = create(:story, {hn_id: 54321})
+    expect(HighSnHn::HnItem.new(54321).data.except!(:created_at)).to eq(story.data_attributes.except!(:created_at))
+  end
+
+  it 'should not have a model if there is not one in the DB' do
+    expect(HighSnHn::HnItem.new(987654).model).to eq(nil)
+  end
+
+  it 'should set data to nil when model not found' do
+    expect(HighSnHn::HnItem.new(987654).data).to eq(nil)
+  end
+
+
+  describe 'should_fetch?' do
+
+    it 'should fetch if it did not find a model' do
+      expect(HighSnHn::Story).to receive(:where).and_return([])
+      expect(HighSnHn::Comment).to receive(:where).and_return([])
+      expect(HighSnHn::HnItem.new(54321).should_fetch?).to eq(true)
     end
 
-    describe 'complete?' do
-      it 'should return the page title' do
-        expect(1).to eq(1)
-      end
+    it 'should fetch if the model is found but incomplete' do
+      story = create(:story, {hn_id: 54321, dead: false})
+      expect(HighSnHn::Story).to receive(:where).and_return([story])
+      expect(story).to receive(:complete?).and_return(false)
+
+      expect(HighSnHn::HnItem.new(54321).should_fetch?).to eq(true)
     end
 
-  #   describe "link" do
-  #     it "should return the URL of the submission item" do
-  #       expect(@item.link).to eq("http://joearms.github.io/2014/02/01/big-changes-to-erlang.html")
-  #     end
-  #   end
+    it 'should not fetch if the item is marked dead' do
+      story = create(:story, {hn_id: 54321, dead: true})
+      expect(HighSnHn::HnItem.new(54321).should_fetch?).to eq(false)
+    end
 
-  #   describe "score" do
-  #     it "should find a string with the number of points" do
-  #       expect(@item.score).to eq("171")
-  #     end
-  #   end
+    it 'should not fetch if the item is complete' do
+      story = create(:story, {hn_id: 54321})
+      expect(HighSnHn::Story).to receive(:where).and_return([story])
+      expect(story).to receive(:complete?).and_return(true)
 
-  #   describe "hn_id" do
-  #     it "should find a string with the HN id" do
-  #       expect(@item.hn_id).to eq("7162113")
-  #     end
-  #   end
+      expect(HighSnHn::HnItem.new(54321).should_fetch?).to eq(false)
+    end
 
-  #   describe "user" do
-  #     it "should find the submitting user's name" do
-  #       expect(@item.user).to eq("waffle_ss")
-  #     end
-  #   end
-
-  #   describe "comment_count" do
-  #     it "should find a string with the HN id" do
-  #       expect(@item.comment_count).to eq("75")
-  #     end
-  #   end
-  # end
-
-  # describe "for an https link" do
-  #   before(:each) do
-  #     @item = HighSnHn::HnPage.new.links[2]
-  #   end
-
-  #   describe "title" do
-  #     it "should return the page's title" do
-  #       expect(@item.title).to eq("How in-app purchases have destroyed the game industry")
-  #     end
-  #   end
-
-  #   describe "link" do
-  #     it "should return the URL of the submission item" do
-  #       expect(@item.link).to eq("https://www.baekdal.com/opinion/how-inapp-purchases-has-destroyed-the-industry/")
-  #     end
-  #   end
-
-  #   describe "score" do
-  #     it "should find a string with the number of points" do
-  #       expect(@item.score).to eq("284")
-  #     end
-  #   end
-
-  #   describe "hn_id" do
-  #     it "should find a string with the HN id" do
-  #       expect(@item.hn_id).to eq("7161901")
-  #     end
-  #   end
-
-  #   describe "user" do
-  #     it "should find the submitting user's name" do
-  #       expect(@item.user).to eq("seivan")
-  #     end
-  #   end
-
-  #   describe "comment_count" do
-  #     it "should find a string with the HN id" do
-  #       expect(@item.comment_count).to eq("251")
-  #     end
-  #   end
   end
 end

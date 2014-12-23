@@ -12,16 +12,21 @@ module HighSnHn
 
     def initialize(id)
       @id = id
-      @model = false
+      @model = find_model
+      @data = @model.data_attributes if @model
     end
 
-    def complete?
+    def should_fetch?
+      @model.blank? || !(@model.dead || @model.complete?)
+    end
+
+    def find_model
       # we haven't fetched so we don't know which type of item this is
       # will look and see if we have a comment or story matching
       item = HighSnHn::Story.where(hn_id: @id).first
       item = HighSnHn::Comment.where(hn_id: @id).first if item.nil?
-      @data = item.data_attributes if item
-      item && item.complete?
+
+      item
     end
 
     def fetch

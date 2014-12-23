@@ -7,12 +7,10 @@ module HighSnHn
       return unless min_item.to_i > 0 && max_item.to_i > 0
       (min_item..max_item).each do |id|
         begin
-          #LOGGER.error("FETCHING: #{id}")
+          #LOGGER.info("ItemsWorker for: #{id}")
           item = HighSnHn::HnItem.new(id)
 
-          if item.complete?
-            return true
-          else
+          if item.should_fetch?
             #LOGGER.info("Fetching HnItem ##{id}")
             item.fetch
           end
