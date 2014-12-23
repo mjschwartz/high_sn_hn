@@ -38,7 +38,7 @@ module HighSnHn
         story_id:      id,
         score:         data.score,
         comment_count: comments.count,
-        title:         data.title
+        title:         HighSnHn::Title.where(body: data.title).first_or_create
       })
     end
 
