@@ -37,7 +37,8 @@ module HighSnHn
       HighSnHn::Snapshot.create({
         story_id:      id,
         score:         data.score,
-        comment_count: comments.count
+        comment_count: comments.count,
+        title:         data.title
       })
     end
 
