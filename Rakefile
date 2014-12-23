@@ -58,7 +58,7 @@ task :start_resque do
   env_vars = {
     'PIDFILE' => pwd + '/log/resque.pid',
     'BACKGROUND' => 'yes',
-    'HIGHSNHN_ENV' => 'production',
+    #'HIGHSNHN_ENV' => 'production',
     'TERM_CHILD' => '1',
     'RESQUE_TERM_TIMEOUT' => '10',
     'QUEUES' => '*'

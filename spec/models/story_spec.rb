@@ -27,6 +27,13 @@ describe HighSnHn::Story do
       expect(postable.map { |x| x.id }).to eq([@story1.id])
     end
 
+    it 'should select stories that are not dead' do
+      create(:postable_story, created_at: 3.days.ago)
+      postable = HighSnHn::Story.postable.to_a
+      expect(postable.map { |x| x.id }).to eq([@story1.id])
+    end
+
+
     it 'should select stories with snapshots, proper s/n and no postings' do
       create(:posting, story: @story1)
       postable = HighSnHn::Story.postable.to_a

@@ -8,7 +8,7 @@ gem 'mysql2'
 gem 'nokogiri'
 gem 'redis'
 gem 'resque'
-gem 'rest-firebase'
+#gem 'rest-firebase'
 gem 'rspec'
 gem 'twitter', '~> 5.6.0'
 gem 'whenever', :require => false

@@ -20,6 +20,9 @@ require_relative "./high_sn_hn/workers/top_story_worker"
 require 'logger'
 PWD = File.dirname(File.expand_path(__FILE__))
 LOGGER = Logger.new("#{PWD}/../log/high_sn_hn.log")
+
+require 'redis'
+require 'resque'
 REDIS = Redis.new
 
 module HighSnHn

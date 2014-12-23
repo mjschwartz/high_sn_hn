@@ -10,11 +10,11 @@ module HighSnHn
 
         puts "Creating snapshots table..."
         create_table "snapshots", :force => true do |t|
+          t.string    "title"
           t.integer   "story_id"
           t.integer   "score", default: 0
           t.integer   "comment_count", default: 0
           t.datetime  "created_at"
-          t.datetime  "updated_at"
         end
         add_index "snapshots", ["story_id"], :name => "index_snapshots_on_hn_story_id"
 
@@ -54,10 +54,10 @@ module HighSnHn
         add_index "comments", ["story_id"], :name => "index_comments_on_story_id"
         add_index "comments", ["hn_id"], :name => "index_comments_on_hn_id"
 
-        ActiveRecord::Base.connection.execute("SET collation_connection = 'utf8_general_ci';")
-        ActiveRecord::Base.connection.execute("ALTER DATABASE #{ActiveRecord::Base.connection_config[:database]} CHARACTER SET utf8 COLLATE utf8_general_ci;")
+        ActiveRecord::Base.connection.execute("SET collation_connection = 'utf8mb4_unicode_ci';")
+        ActiveRecord::Base.connection.execute("ALTER DATABASE #{ActiveRecord::Base.connection_config[:database]} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;")
         self.tables.each do |t|
-          sql = "ALTER TABLE #{t} CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;"
+          sql = "ALTER TABLE #{t} CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
           ActiveRecord::Base.connection.execute(sql)
         end
         puts "done."

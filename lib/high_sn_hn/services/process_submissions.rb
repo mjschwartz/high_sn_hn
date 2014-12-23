@@ -22,8 +22,6 @@ module HighSnHn
     def post
       candidates.each do |postable|
         HighSnHn::TweetSubmission.new(postable).post
-        # postable.tweeted = true
-        # postable.save
       end
     end
   end
