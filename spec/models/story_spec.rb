@@ -2,11 +2,6 @@ require 'spec_helper'
 
 describe HighSnHn::Story do
 
-  before(:each) do
-    HighSnHn::Story.delete_all
-    HighSnHn::Posting.delete_all
-    HighSnHn::Snapshot.delete_all
-  end
   it "should be setup" do
     expect(HighSnHn::Story.new).to be_an_instance_of(HighSnHn::Story)
   end
@@ -40,5 +35,17 @@ describe HighSnHn::Story do
       expect(postable.map { |x| x.id }).to eq([])
     end
   end
+
+  # describe 'update' do
+
+  #   before(:each) do
+  #     #allow(HighSnHn::Snapshot).to receive(:hmset).and_return(true)
+  #   end
+
+  #   it 'should'
+
+
+
+  # end
 
 end

@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.setup
 require 'fakeweb'
+require 'database_cleaner'
 
 ENV['HIGHSNHN_ENV'] = 'test'
 require_relative '../app'
@@ -20,16 +21,17 @@ STORY_JSON = JSON.parse(File.read(File.join(__dir__, 'support/story.json')))
 HighSnHn::Setup.test_db
 
 RSpec.configure do |config|
-#   config.before(:all) do
-#     # Create fixtures
-#   end
-  config.after(:all) do
-    # Destroy fixtures
-    HighSnHn::Story.delete_all
-    HighSnHn::Comment.delete_all
-    HighSnHn::Posting.delete_all
-    HighSnHn::Snapshot.delete_all
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
   end
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
   config.mock_with :rspec
   config.include FactoryGirl::Syntax::Methods
   config.order = 'random'

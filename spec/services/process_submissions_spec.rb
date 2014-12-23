@@ -22,11 +22,6 @@ describe HighSnHn::ProcessSubmissions do
   end
 
   describe "candiate submissions" do
-    before(:each) do
-      HighSnHn::Story.delete_all
-      HighSnHn::Posting.delete_all
-      HighSnHn::Snapshot.delete_all
-    end
 
     it "should be ordered by s/n descending " do
       sub1 = create(:story)

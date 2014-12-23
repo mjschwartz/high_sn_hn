@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activerecord', '~> 4.1'
+gem 'database_cleaner'
 gem 'fakeweb', '~> 1.3'
 gem 'factory_girl'
 gem 'httparty'
