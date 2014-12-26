@@ -1,7 +1,7 @@
 module HighSnHn
 
   class ItemsWorker
-    @queue = :items_queue
+    @queue = :high_sn
 
     def self.perform(min_item, max_item)
       return unless min_item.to_i > 0 && max_item.to_i > 0

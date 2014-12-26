@@ -1,7 +1,7 @@
 module HighSnHn
 
   class HighIdWorker
-    @queue = :id_queue
+    @queue = :high_sn
 
     def self.perform
       #LOGGER.info("Fetching current high id")

@@ -1,7 +1,7 @@
 module HighSnHn
 
   class TopStoryWorker
-    @queue = :top_queue
+    @queue = :high_sn
 
     def self.perform
       #LOGGER.info("Fetching top stories")
