@@ -17,13 +17,15 @@ end
 desc 'Find the current high id'
 task :find_high_id do
   require './app'
-  Resque.enqueue(HighSnHn::HighIdWorker)
+  #Resque.enqueue(HighSnHn::HighIdWorker)
+  HighSnHn::HighIdWorker.perform
 end
 
 desc 'Parse the current Top 100 stories list'
 task :top_stories do
   require './app'
-  Resque.enqueue(HighSnHn::TopStoryWorker)
+  #Resque.enqueue(HighSnHn::TopStoryWorker)
+  HighSnHn::TopStoryWorker.perform
 end
 
 desc 'Stop the Resque worker'
@@ -58,7 +60,7 @@ task :start_resque do
   env_vars = {
     'PIDFILE' => pwd + '/log/resque.pid',
     'BACKGROUND' => 'yes',
-    #'HIGHSNHN_ENV' => 'production',
+    'HIGHSNHN_ENV' => 'production',
     'TERM_CHILD' => '1',
     'RESQUE_TERM_TIMEOUT' => '10',
     'QUEUES' => '*'
