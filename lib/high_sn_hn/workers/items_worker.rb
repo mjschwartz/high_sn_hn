@@ -17,7 +17,7 @@ module HighSnHn
 
         rescue NullItemResult => e
           # there was no HTTP result for the item fetch - requeue
-          LOGGER.error("#{e}")
+          #LOGGER.error("#{e}")
           HighSnHn::ReEnqueueItem.new(id)
         end
       end

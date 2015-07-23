@@ -13,6 +13,10 @@ FakeWeb.register_uri(:get, 'https://hacker-news.firebaseio.com/v0/topstories.jso
   body: top,
   content_type: 'application/json; charset=utf-8')
 
+FakeWeb.register_uri(:get, 'https://hacker-news.firebaseio.com/v0/maxitem.json',
+  body: File.read(File.join(__dir__, 'support/high.json')),
+  content_type: 'application/json; charset=utf-8')
+
 COMMENT_JSON = JSON.parse(File.read(File.join(__dir__, 'support/comment.json')))
 STORY_JSON = JSON.parse(File.read(File.join(__dir__, 'support/story.json')))
 
