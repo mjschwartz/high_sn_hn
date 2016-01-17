@@ -69,6 +69,14 @@ task :start_resque do
   Process.detach(pid)
 end
 
+desc 'Monitor Resque'
+task :monitor_resque do
+  if Resque.workers.blank?
+    Rake::Task["start_resque"].invoke
+  end
+end
+
+
 desc 'Load envt for Resque'
 task 'resque:setup' do
   require './app'
