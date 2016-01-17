@@ -71,6 +71,7 @@ end
 
 desc 'Monitor Resque'
 task :monitor_resque do
+  require './app'
   if Resque.workers.blank?
     Rake::Task["start_resque"].invoke
   end
