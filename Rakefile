@@ -73,7 +73,15 @@ desc 'Monitor Resque'
 task :monitor_resque do
   require './app'
   if Resque.workers.blank?
-    Rake::Task["start_resque"].invoke
+    Rake::Task['start_resque'].invoke
+  else
+    last_post = HighSnHn::Posting.order('created_at DESC').first.created_at.to_i
+    now = DateTime.now.to_i
+    # more than 12 hours since the last post
+    if (now - last_post) > (3600 * 12)
+      Rake::Task['stop_resque'].invoke
+      Rake::Task['start_resque'].invoke
+    end
   end
 end
 
