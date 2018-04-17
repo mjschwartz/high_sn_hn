@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'activerecord', '~> 4.1'
+gem 'activerecord'
 gem 'database_cleaner'
 gem 'fakeweb', '~> 1.3'
-gem 'factory_girl'
+gem 'factory_bot'
 gem 'httparty'
 gem 'mysql2'
 gem 'nokogiri'
